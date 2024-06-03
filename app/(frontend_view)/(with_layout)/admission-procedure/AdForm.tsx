@@ -117,7 +117,9 @@ export default function AdForm() {
                   <FormItem>
                     <FormControl className="relative">
                       <Input
-                        className="focus-visible:ring-transparent hover:border-red-500 focus:border-red-500 rounded-none py-6 font-normal placeholder:font-normal"
+                        className="focus-visible:ring-transparent
+                         hover:border-red-500 focus:border-red-500 rounded-none py-6 font-normal 
+                         placeholder:font-sans placeholder:font-medium"
                         placeholder="Name"
                         {...field}
                       />
@@ -141,7 +143,7 @@ export default function AdForm() {
                   <FormItem>
                     <FormControl className="relative">
                       <Input
-                        className="focus-visible:ring-transparent hover:border-red-500 focus:border-red-500 rounded-none py-6 font-normal placeholder:font-normal"
+                        className="focus-visible:ring-transparent hover:border-red-500 focus:border-red-500 rounded-none py-6 font-normal placeholder:font-sans placeholder:font-medium"
                         placeholder="Email"
                         {...field}
                       />
@@ -165,7 +167,7 @@ export default function AdForm() {
                   <FormItem>
                     <FormControl className="relative">
                       <Input
-                        className="focus-visible:ring-transparent hover:border-red-500 focus:border-red-500 rounded-none py-6 font-normal placeholder:font-normal"
+                        className="focus-visible:ring-transparent hover:border-red-500 focus:border-red-500 rounded-none py-6 font-normal placeholder:font-sans placeholder:font-medium"
                         placeholder="Phone Number"
                         {...field}
                       />
@@ -190,7 +192,7 @@ export default function AdForm() {
                     <FormControl className="relative">
                       <Textarea
                         rows={5}
-                        className="focus-visible:ring-transparent hover:border-red-500 focus:border-red-500 rounded-none  font-normal placeholder:font-normal"
+                        className="focus-visible:ring-transparent hover:border-red-500 focus:border-red-500 rounded-none  font-normal placeholder:font-sans placeholder:font-medium"
                         placeholder="Message"
                         {...field}
                       />
@@ -212,7 +214,7 @@ export default function AdForm() {
               initial={"offscreen"}
               whileInView={"onscreen"}
               viewport={{ once: true, amount: 0 }}
-              className={`flex justify-center items-center mt-2 `}
+              className={`flex justify-center items-center  `}
             >
               <LoadingButton
                 type="submit"

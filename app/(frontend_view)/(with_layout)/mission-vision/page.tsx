@@ -18,6 +18,7 @@ import {
 import AnimatedText from "@/components/Animated/AnimatedText";
 import { missionStatements, visionStatement } from "@/lib/helpers/displayData";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
+import HeadingP from "@/components/Headings/HeadingP";
 
 export default function MVPageName() {
   return (
@@ -28,7 +29,7 @@ export default function MVPageName() {
 
       <AnimatedDiv
         id="missionVisionSection "
-        className={` py-[35px] sm:py-[50px] md:px-[35px] xl:px-[70px] overflow-hidden`}
+        className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px] overflow-hidden`}
         variants={springAnimate20vhFromBelow10}
         initial={"offscreen"}
         whileInView={"onscreen"}
@@ -44,9 +45,9 @@ export default function MVPageName() {
                 transition={{ duration: 1, type: "tween" }}
                 viewport={{ once: true, amount: 0.2 }}
               >
-                <div className="headingContainer mb-6">
+                {/* <div className="headingContainer mb-6">
                   <AnimatedDiv
-                    className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
+                    className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-4"
                     variants={springAnimateFromBelow10}
                     initial={"offscreen"}
                     whileInView={"onscreen"}
@@ -56,7 +57,14 @@ export default function MVPageName() {
                     <span className="">Vision</span>
                   </AnimatedDiv>
                   <div className="w-[100px] border-b-[2px] border-red-500 mb-3"></div>
-                </div>
+                </div> */}
+                <HeadingP
+                  first="Our Vision"
+                  baseWidth="60px"
+                  baseHeight="2px"
+                  gap="mb-2"
+                  fontSize="3xl"
+                />
                 <AnimatedText
                   className="font-sans font-semibold leading-8 text-black text-[18px]  mb-6"
                   variants={tweenAnimateFromLeft10}
@@ -89,19 +97,13 @@ export default function MVPageName() {
                 viewport={{ once: true, amount: 0.2 }}
               >
                 <div className=" bg-white p-4">
-                  <div className="headingContainer mb-6">
-                    <AnimatedDiv
-                      className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
-                      variants={springAnimateFromBelow10}
-                      initial={"offscreen"}
-                      whileInView={"onscreen"}
-                      viewport={{ once: true, amount: 0.2 }}
-                    >
-                      Our &nbsp;
-                      <span className="">Mission</span>
-                    </AnimatedDiv>
-                    <div className="w-[100px] border-b-[2px] border-red-500 mb-3"></div>
-                  </div>
+                  <HeadingP
+                    first="Our Mission"
+                    baseWidth="60px"
+                    baseHeight="2px"
+                    gap="mb-2"
+                    fontSize="3xl"
+                  />
                   <div className="text-2xl md:text-4xl text-start font-bold text-[#333333] mb-4">
                     {missionStatements.map((item: string, i: number) => (
                       <AnimatedDiv

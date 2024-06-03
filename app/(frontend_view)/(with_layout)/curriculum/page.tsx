@@ -1,8 +1,8 @@
 /*** nextjs ***/
 import Image from "next/image";
 /*** fonts ***/
-import { Poppins } from "next/font/google";
-const font = Poppins({ weight: "400", subsets: ["latin"] });
+import { Nunito } from "next/font/google";
+const font = Nunito({ weight: "400", subsets: ["latin"] });
 /*** images ***/
 import knowledgeCenter1 from "@/public/knowledge-center/1.jpg";
 /*** icons ***/
@@ -12,6 +12,8 @@ import { curriculumDetails } from "@/lib/helpers/displayData";
 import { springAnimate70pxFromBelow10 } from "@/lib/helpers/variants";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
+import HeadingP from "@/components/Headings/HeadingP";
+import HDivider from "@/components/Dividers/HDivider";
 
 export default function CPageName() {
   return (
@@ -20,23 +22,15 @@ export default function CPageName() {
 
       <section
         id="curriculumSection"
-        className="py-[35px] sm:py-[50px] md:px-[35px] xl:px-[70px]  "
+        className="py-[35px] sm:py-[50px] px-4 xl:px-[70px]  "
       >
-        <div className="px-4 ">
-          <div className="mx-auto ">
-            <AnimatedDiv
-              variants={springAnimate70pxFromBelow10}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{ once: true, amount: 0 }}
-              className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
-            >
-              {curriculumDetails.curriculumData.mainHeading}
-            </AnimatedDiv>
-            <div className="w-[100px] border-b-[3px] border-red-700 mb-4"></div>
-          </div>
+        <div className="">
+          <HeadingP
+            first={curriculumDetails.curriculumData.mainHeading}
+            boldness="!font-bold"
+          />
           <div className="  pb-4">
-            <div className=" lg:grid lg:grid-cols-2 p-4 pb-0">
+            <div className=" lg:grid lg:grid-cols-2  p-0">
               <div className="left">
                 {curriculumDetails.curriculumData.list1.map(
                   (item: string, i: number) => (
@@ -45,16 +39,19 @@ export default function CPageName() {
                       initial={{ opacity: 0, x: "20vw" }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{
-                        duration: i * 0.1 + 1,
                         type: "tween",
                       }}
-                      viewport={{ once: true, amount: 0.2 }}
-                      className=" flex gap-2 mb-3"
+                      viewport={{ once: true, amount: 0 }}
+                      className=" flex gap-2 mb-1"
                     >
                       <span className="flex justify-center items-center pb-[1px]">
                         <FaRegHandPointRight className="text-red-700 text-[15px] " />
                       </span>
-                      <span className={`text-gray-800  leading-8`}>{item}</span>
+                      <span
+                        className={`text-gray-800 font-sans leading-8 ${font.className}`}
+                      >
+                        {item}
+                      </span>
                     </AnimatedDiv>
                   )
                 )}
@@ -65,7 +62,9 @@ export default function CPageName() {
                   whileInView={"onscreen"}
                   viewport={{ once: true, amount: 0 }}
                 >
-                  <p className={`text-base my-4 font-semibold text-gray-900`}>
+                  <p
+                    className={`text-lg my-4 font-semibold  font-sans text-gray-900`}
+                  >
                     {curriculumDetails.curriculumData.list2Heading}
                   </p>
                 </AnimatedDiv>
@@ -80,12 +79,16 @@ export default function CPageName() {
                         type: "tween",
                       }}
                       viewport={{ once: true, amount: 0 }}
-                      className=" flex gap-2 mb-3"
+                      className=" flex gap-2 mb-1"
                     >
                       <span className="flex justify-center items-center pb-[1px]">
                         <FaRegHandPointRight className="text-red-700 text-[15px] " />
                       </span>
-                      <span className={`text-gray-800  leading-8`}>{item}</span>
+                      <span
+                        className={`text-gray-800 font-sans ${font.className} leading-8`}
+                      >
+                        {item}
+                      </span>
                     </AnimatedDiv>
                   )
                 )}
@@ -118,31 +121,26 @@ export default function CPageName() {
           </div>
         </div>
       </section>
-      <section id="" className={` sm:px-[35px] xl:px-[70px]`}>
-        <div className={` px-4 mx-auto `}>
-          <div className="border-b-gray-200/70 border-b-[1px] mt-3"></div>
-        </div>
+      <section id="" className={` px-4 xl:px-[70px]`}>
+        <HDivider classes="!m-0" />
       </section>
 
-      <section
-        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]   `}
-      >
-        <div className={` px-4 mx-auto `}>
-          <div className="grid lg:grid-cols-3 p-4 gap-4">
+      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]   `}>
+        <div className={`  p-8  mx-auto bg-[#FAF6E2] `}>
+          <div className="grid lg:grid-cols-3  gap-4">
             {curriculumDetails.classSubjectsData.map(
               (item: { [key: string]: any }, i: number) => (
                 <div key={i} className="box1">
-                  <div className="mx-auto ">
-                    <AnimatedDiv
-                      variants={springAnimate70pxFromBelow10}
-                      initial={"offscreen"}
-                      whileInView={"onscreen"}
-                      viewport={{ once: true, amount: 0 }}
-                      className="text-xl md:text-3xl text-start font-bold text-gray-900 mb-4"
-                    >
-                      {item.mainHeading}
-                    </AnimatedDiv>
-                    <div className="w-[100px] border-b-[3px] border-red-700 mb-4"></div>
+                  <div className="mx-auto relative inline-block">
+                    <HeadingP
+                      containerClasses="inline-block !mb-0"
+                      first={item.mainHeading}
+                      baseColor="red-700"
+                      fontSize="2xl"
+                      boldness="!font-bold"
+                      baseHeight="2px"
+                      baseClasses="!w-[60px]"
+                    />
                     {item.list1.map((sub: string, j: number) => (
                       <AnimatedDiv
                         key={j}
@@ -153,12 +151,12 @@ export default function CPageName() {
                           type: "tween",
                         }}
                         viewport={{ once: true, amount: 0 }}
-                        className=" flex gap-2 mb-3"
+                        className=" flex gap-2 mb-1"
                       >
-                        <span className="flex justify-center items-center pb-[1px]">
+                        <span className="flex justify-center items-start pt-2 pb-[1px]">
                           <FaRegHandPointRight className="text-red-700 text-[15px] " />
                         </span>
-                        <span className={`text-gray-800  leading-8`}>
+                        <span className={`text-gray-800 font-sans leading-8`}>
                           {sub}
                         </span>
                       </AnimatedDiv>
@@ -171,19 +169,16 @@ export default function CPageName() {
         </div>
       </section>
 
-      <section className={` pb-[35px] sm:pb-[50px] sm:px-[35px] xl:px-[70px] `}>
-        <div className={` p-8 mx-auto bg-[#FAF6E2]`}>
+      <section className={` pb-[35px] sm:pb-[50px] px-4 xl:px-[70px] `}>
+        <div className={`p-8  mx-auto bg-[#FAF6E2]`}>
           <div className="mx-auto ">
-            <AnimatedDiv
-              variants={springAnimate70pxFromBelow10}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{ once: true, amount: 0 }}
-              className="text-xl md:text-3xl text-start font-bold text-gray-900 mb-4"
-            >
-              {curriculumDetails.assessmentData.mainHeading}
-            </AnimatedDiv>
-            <div className="w-[100px] border-b-[3px] border-red-700 mb-4"></div>
+            <HeadingP
+              first={curriculumDetails.assessmentData.mainHeading}
+              fontSize="2xl"
+              baseColor="red-700"
+              baseHeight="2px"
+              boldness="!font-bold"
+            />
             <AnimatedDiv
               variants={springAnimate70pxFromBelow10}
               initial={"offscreen"}
@@ -191,7 +186,7 @@ export default function CPageName() {
               viewport={{ once: true, amount: 0 }}
               className=" flex gap-2 mb-3"
             >
-              <span className={`text-gray-800 text-base leading-8`}>
+              <span className={`text-gray-800 text-base font-sans leading-8`}>
                 {curriculumDetails.assessmentData.mainTag}
               </span>
             </AnimatedDiv>
@@ -206,31 +201,30 @@ export default function CPageName() {
                     type: "tween",
                   }}
                   viewport={{ once: true, amount: 0 }}
-                  className=" flex gap-2 mb-3"
+                  className=" flex gap-2 mb-1"
                 >
-                  <span className="flex justify-center items-center pb-[1px]">
+                  <span className="flex justify-center items-start pt-2 pb-[1px]">
                     <FaRegHandPointRight className="text-red-700 text-[15px] " />
                   </span>
-                  <span className={`text-gray-800  leading-8`}>{item}</span>
+                  <span className={`text-gray-800 font-sans leading-8`}>
+                    {item}
+                  </span>
                 </AnimatedDiv>
               )
             )}
           </div>
         </div>
       </section>
-      <section className={` pb-[35px] sm:pb-[50px] sm:px-[35px] xl:px-[70px] `}>
+      <section className={` pb-[35px] sm:pb-[50px] px-4 xl:px-[70px] `}>
         <div className={` p-8 mx-auto bg-[#FAF6E2]`}>
           <div className="mx-auto ">
-            <AnimatedDiv
-              variants={springAnimate70pxFromBelow10}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{ once: true, amount: 0 }}
-              className="text-xl md:text-3xl text-start font-bold text-gray-900 mb-4"
-            >
-              {curriculumDetails.toolsOfAssessmentData.mainHeading}
-            </AnimatedDiv>
-            <div className="w-[100px] border-b-[3px] border-red-700 mb-4"></div>
+            <HeadingP
+              fontSize="2xl"
+              first={curriculumDetails.toolsOfAssessmentData.mainHeading}
+              baseColor="red-700"
+              baseHeight="2px"
+              boldness="!font-bold"
+            />
 
             {curriculumDetails.toolsOfAssessmentData.list1.map(
               (item: string, i: number) => (
@@ -243,12 +237,14 @@ export default function CPageName() {
                     type: "tween",
                   }}
                   viewport={{ once: true, amount: 0 }}
-                  className=" flex gap-2 mb-3"
+                  className=" flex gap-2 mb-1"
                 >
-                  <span className="flex justify-center items-center pb-[1px]">
-                    <FaRegHandPointRight className="text-red-700 text-[15px] " />
+                  <span className="flex justify-center items-start pt-2 pb-[1px]">
+                    <FaRegHandPointRight className="text-red-700 text-[15px]  " />
                   </span>
-                  <span className={`text-gray-800  leading-8`}>{item}</span>
+                  <span className={`text-gray-800 font-sans leading-8`}>
+                    {item}
+                  </span>
                 </AnimatedDiv>
               )
             )}

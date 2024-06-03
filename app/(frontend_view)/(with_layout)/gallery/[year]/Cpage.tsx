@@ -53,7 +53,7 @@ export default function CPage({
           transition={{ type: "spring", stiffness: 120, duration: 1 }}
           viewport={{ once: true, amount: 0 }}
         >
-          <div className="text-lg sm:text-xl md:text-2xl xl:text-4xl text-start font-bold text-gray-900 mb-4">
+          <div className="text-lg sm:text-xl md:text-2xl xl:text-4xl text-start font-semibold font-sans text-gray-900 mb-4">
             Gallery{" "}
             <span className="text-secondary-red1">{yearData?.fiscal_year}</span>
           </div>

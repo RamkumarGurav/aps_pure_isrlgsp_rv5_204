@@ -92,7 +92,7 @@ export default function FPageName() {
             transition={{ type: "spring", stiffness: 120, duration: 1 }}
             viewport={{ once: true, amount: 0 }}
           >
-            <div className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-2">
+            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
               Our&nbsp;
               <span className="text-secondary-red1">Facilities</span>
             </div>
@@ -377,7 +377,7 @@ export default function FPageName() {
             transition={{ type: "spring", stiffness: 120, duration: 1 }}
             viewport={{ once: true, amount: 0.1 }}
           >
-            <div className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-2">
+            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
               Our&nbsp;
               <span className="text-secondary-red1">Infrastructure</span>
             </div>
@@ -417,7 +417,7 @@ export default function FPageName() {
             transition={{ type: "spring", stiffness: 120, duration: 1 }}
             viewport={{ once: true, amount: 0 }}
           >
-            <div className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-2">
+            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
               Knowledge&nbsp;
               <span className="text-secondary-red1">Center</span>
             </div>
@@ -472,7 +472,7 @@ export default function FPageName() {
             transition={{ type: "spring", stiffness: 120, duration: 1 }}
             viewport={{ once: true, amount: 0 }}
           >
-            <div className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-2">
+            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
               Science&nbsp;
               <span className="text-secondary-red1">Lab</span>
             </div>
@@ -519,7 +519,7 @@ export default function FPageName() {
             transition={{ type: "spring", stiffness: 120, duration: 1 }}
             viewport={{ once: true, amount: 0 }}
           >
-            <div className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-2">
+            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
               Sports&nbsp;
             </div>
             <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
@@ -578,7 +578,7 @@ export default function FPageName() {
             transition={{ type: "spring", stiffness: 120, duration: 1 }}
             viewport={{ once: true, amount: 0 }}
           >
-            <div className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-2">
+            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
               Transport&nbsp;
             </div>
             <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>

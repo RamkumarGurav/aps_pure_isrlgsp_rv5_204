@@ -111,7 +111,8 @@ export default function EmpCreateCard() {
                       className="
                       
                        font-normal placeholder:font-normal
-                      focus-visible:ring-transparent border-[#8b863c] hover:border-gray-900 focus:border-gray-900
+                      focus-visible:ring-transparent border-[#8b863c] hover:border-gray-900 focus:border-gray-900 
+                      placeholder:font-sans
                       "
                       placeholder="Name*"
                       {...field}
@@ -131,7 +132,8 @@ export default function EmpCreateCard() {
                     <Input
                       className="
                       font-normal placeholder:font-normal
-                     focus-visible:ring-transparent border-[#8b863c] hover:border-gray-900 focus:border-gray-900
+                     focus-visible:ring-transparent border-[#8b863c] hover:border-gray-900 focus:border-gray-900 
+                     placeholder:font-sans
                      "
                       placeholder="Email*"
                       {...field}
@@ -151,7 +153,8 @@ export default function EmpCreateCard() {
                     <Input
                       className="
                       font-normal placeholder:font-normal
-                     focus-visible:ring-transparent border-[#8b863c] hover:border-gray-900 focus:border-gray-900
+                     focus-visible:ring-transparent border-[#8b863c] hover:border-gray-900 focus:border-gray-900 
+                     placeholder:font-sans
                      "
                       placeholder="Mobile Number*"
                       {...field}
@@ -171,7 +174,8 @@ export default function EmpCreateCard() {
                     <Textarea
                       className="
                        font-normal placeholder:font-normal
-                      focus-visible:ring-transparent border-[#8b863c] hover:border-gray-900 focus:border-gray-900
+                      focus-visible:ring-transparent border-[#8b863c] hover:border-gray-900 focus:border-gray-900 
+                      placeholder:font-sans
                       "
                       placeholder="Message*"
                       {...field}

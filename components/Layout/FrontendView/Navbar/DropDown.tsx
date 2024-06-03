@@ -22,7 +22,7 @@ export default function DropDown({
     <div
       className={`bg-yellow-muted w-full  h-[250px] absolute  left-0  ${
         open ? "top-[100%] shadow-b" : " top-[-500px] "
-      } visible transition-all duration-700 ease-in-out lg:hidden  py-2 pt-6 px-6 sm:px-12  font-sans 
+      } visible transition-all duration-700 ease-in-out lg:hidden  py-2 pt-6 px-6 pl-4 sm:px-12 sm:pl-6 font-sans 
       text-sm   z-[-1]`}
     >
       <div className={`h-full overflow-y-auto`}>

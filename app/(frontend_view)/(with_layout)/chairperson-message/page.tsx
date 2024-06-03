@@ -11,6 +11,7 @@ import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import AnimatedText from "@/components/Animated/AnimatedText";
 import AnimatedTitle from "@/components/Animated/AnimatedDiv";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
+import HeadingP from "@/components/Headings/HeadingP";
 
 export default function CHMPageName() {
   return (
@@ -19,23 +20,16 @@ export default function CHMPageName() {
 
       <section
         id="chairpersonMsg"
-        className="py-[35px] sm:py-[50px] md:px-[35px] xl:px-[70px]  "
+        className="py-[35px] sm:py-[50px]  xl:px-[70px]  "
       >
-        <div className="px-4">
-          <div className="mx-auto ">
-            <AnimatedDiv
-              className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
-              variants={springAnimate70pxFromBelow10}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{ once: true, amount: 0 }}
-            >
-              Chairperson &nbsp;
-              <span className="text-secondary-red1">Message</span>
-            </AnimatedDiv>
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </div>
-          <div className="chairpersonMsgContainer bg-[#FAF6E2] ">
+        <div className="">
+          <HeadingP
+            first="Chairperson"
+            containerClasses="px-4"
+            second="Message"
+            boldness="!font-bold"
+          />
+          <div className="chairpersonMsgContainer bg-[#FAF6E2] p-4">
             <div className=" grid lg:grid-cols-2 p-4">
               <div>
                 <AnimatedTitle
@@ -43,7 +37,7 @@ export default function CHMPageName() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true, amount: 0 }}
-                  className={`text-[#007BFF] text-lg sm:text-xl font-bold mb-2 `}
+                  className={`text-[#007BFF] text-lg sm:text-xl lg:text-2xl  font-semibold font-sans mb-3 `}
                 >
                   Mrs. RAJAB KASIAR
                 </AnimatedTitle>
@@ -52,7 +46,7 @@ export default function CHMPageName() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.2, type: "tween" }}
                   viewport={{ once: true, amount: 0 }}
-                  className={`text-[#e6272d] text-base font-semibold mb-2`}
+                  className={`text-[#e6272d] text-base font-semibold font-sans mb-2`}
                 >
                   Chairperson
                 </AnimatedText>
@@ -61,7 +55,7 @@ export default function CHMPageName() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.4, type: "tween" }}
                   viewport={{ once: true, amount: 0 }}
-                  className="leading-8  text-[#1d1d1d]"
+                  className="leading-8  font-sans text-[#333]"
                 >
                   &ldquo;Education is the best gift that can be given to a
                   child&rdquo;
@@ -71,7 +65,7 @@ export default function CHMPageName() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.6, type: "tween" }}
                   viewport={{ once: true, amount: 0 }}
-                  className={`  mt-3 leading-8  text-[#1d1d1d]`}
+                  className={`  mt-3 leading-8  font-sans text-[#333]`}
                 >
                   {" "}
                   At Appolo we provide an atmosphere to our students for

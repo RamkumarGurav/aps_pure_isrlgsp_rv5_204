@@ -10,6 +10,8 @@ import { docsRequired } from "@/lib/helpers/displayData";
 import AnimatedButton from "@/components/Animated/AnimatedButton";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
 import AdForm from "./AdForm";
+import HeadingP from "@/components/Headings/HeadingP";
+import HDivider from "@/components/Dividers/HDivider";
 /*****************************************************
            page
 *****************************************************/
@@ -20,23 +22,17 @@ export default function APPageName() {
 
       <section
         id="admissionProcedureSection"
-        className={`overflow-hidden bg-[#FDFBF0] py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px] ${font.className}`}
+        className={`overflow-hidden bg-[#FDFBF0] py-[35px] sm:py-[50px] px-4 xl:px-[70px] ${font.className}`}
       >
-        <div className={` px-4 mx-auto `}>
-          <div className="headingContainer flex flex-col justify-center items-center mb-6">
-            <AnimatedDiv
-              className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
-              variants={springAnimate70pxFromBelow10}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              Admission &nbsp;
-              <span className="text-secondary-red1">Procedure</span>
-            </AnimatedDiv>
-            <div className="w-[100px] border-b-[3px] border-red-500 mb-3"></div>
-          </div>
-          <div className="grid lg:grid-cols-4 gap-4">
+        <div className={`  mx-auto `}>
+          <HeadingP
+            first="Admission"
+            second=" Procedure"
+            containerClasses="flex flex-col items-center"
+            firstTextClasses="!font-bold"
+          />
+
+          <div className="grid lg:grid-cols-4 gap-4 font-sans mt-10 ">
             <AnimatedDiv
               className="admitCard admitCardParent"
               // variants={springAnimate100perFromBelow10}
@@ -45,7 +41,10 @@ export default function APPageName() {
               transition={{ duration: 1.5, type: "tween" }}
               viewport={{ once: true, amount: 0 }}
             >
-              <div className="flex justify-center items-center bg-transparent relative  mb-4">
+              <div
+                className="flex justify-center items-center bg-transparent relative  mb-4  || 
+              after:content[''] after:absolute after:top-[50%]  after:right-[-30px] after:w-0 after:lg:w-[30px] after:border-b-[0.5px]"
+              >
                 <div
                   className="relative rounded-full  w-[105px] h-[105px] 
                   bg-[#FDFBF0]  z-[99] "
@@ -77,10 +76,12 @@ export default function APPageName() {
                   ></div>
                 </div>
               </div>
-              <p className={`text-center text-gray-600 font-semibold`}>
+              <p
+                className={`text-center text-[18px] text-gray-600 font-semibold`}
+              >
                 Enquiry
               </p>
-              <p className={`text-center text-gray-700 font-medium`}>
+              <p className={`text-center text-gray-700 `}>
                 Submit the online enquiry form or visit the school office. The
                 office staff will get back to you.
               </p>
@@ -92,7 +93,10 @@ export default function APPageName() {
               transition={{ duration: 1.5, type: "tween", delay: 0.2 }}
               viewport={{ once: true, amount: 0 }}
             >
-              <div className="flex justify-center items-center bg-transparent relative  mb-4">
+              <div
+                className="flex justify-center items-center bg-transparent relative  mb-4 || 
+              after:content[''] after:absolute after:top-[50%]  after:right-[-30px] after:w-0 after:lg:w-[30px] after:border-b-[0.5px]"
+              >
                 <div
                   className="relative rounded-full  w-[105px] h-[105px] 
                   bg-[#FDFBF0]  z-[99] "
@@ -123,10 +127,12 @@ export default function APPageName() {
                   ></div>
                 </div>
               </div>
-              <p className={`text-center text-gray-600 font-semibold`}>
+              <p
+                className={`text-center text-gray-600 text-[18px] font-semibold`}
+              >
                 Registration
               </p>
-              <p className={`text-center text-gray-700 font-medium`}>
+              <p className={`text-center text-gray-700 `}>
                 Parents are requested to fill the registration form provided in
                 the office.
               </p>
@@ -138,7 +144,10 @@ export default function APPageName() {
               transition={{ duration: 1.5, type: "tween", delay: 0.4 }}
               viewport={{ once: true, amount: 0 }}
             >
-              <div className="flex justify-center items-center bg-transparent relative  mb-4">
+              <div
+                className="flex justify-center items-center bg-transparent relative  mb-4 || 
+              after:content[''] after:absolute after:top-[50%]  after:right-[-30px] after:w-0 after:lg:w-[30px] after:border-b-[0.5px]"
+              >
                 <div
                   className="relative rounded-full  w-[105px] h-[105px] 
                   bg-[#FDFBF0]  z-[99] "
@@ -169,10 +178,12 @@ export default function APPageName() {
                   ></div>
                 </div>
               </div>
-              <p className={`text-center text-gray-600 font-semibold`}>
+              <p
+                className={`text-center text-gray-600 text-[18px] font-semibold`}
+              >
                 Written Test
               </p>
-              <p className={`text-center text-gray-700 font-medium`}>
+              <p className={`text-center text-gray-700 `}>
                 A written test will be conducted for the students seeking
                 admission for grade 1 and above. Eligible student will be given
                 seat and informed.
@@ -216,31 +227,31 @@ export default function APPageName() {
                   ></div>
                 </div>
               </div>
-              <p className={`text-center text-gray-600 font-semibold`}>
+              <p
+                className={`text-center text-gray-600 text-[18px] font-semibold`}
+              >
                 Admission
               </p>
-              <p className={`text-center text-gray-700 font-medium`}>
+              <p className={`text-center text-gray-700 `}>
                 A meeting with the Principal will be scheduled at the time of
                 admission. The filled application form along with the required
                 documents are to be submitted within 7 days.
               </p>
             </AnimatedDiv>
           </div>
-          <div className="border-b-gray-200 border-b-[1px] my-8"></div>
+          <HDivider />
           <div className={`grid lg:grid-cols-2`}>
             <div className="left ">
-              <div className="headingContainer mb-6">
-                <AnimatedDiv
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ type: "spring", delay: 0.2 }}
-                  viewport={{ amount: 0, once: true }}
-                  className="text-[20px] lg:text-[25px] xl:text-[27px] text-start font-bold text-gray-800 mb-4"
-                >
-                  Documents Required for Admission:
-                </AnimatedDiv>
-                <div className="w-[60px] border-b-[2px] border-red-700 mb-3"></div>
-              </div>
+              <HeadingP
+                first="Documents Required for Admission:"
+                baseColor="red-700"
+                fontSize="text-3xl"
+                boldness="!font-bold"
+                baseWidth="50px"
+                baseHeight="2px"
+                firstTextClasses="leading-8"
+              />
+
               {docsRequired.map((item, i: number) => (
                 <AnimatedDiv
                   key={i}
@@ -257,7 +268,7 @@ export default function APPageName() {
                   <span>
                     <FaRegHandPointRight className="text-red-700 text-[15px] mt-1" />
                   </span>
-                  <span className={`text-gray-800 text-sm leading-6`}>
+                  <span className={`text-gray-800  font-sans leading-6`}>
                     {item}
                   </span>
                 </AnimatedDiv>
@@ -265,18 +276,15 @@ export default function APPageName() {
             </div>
 
             <div className="right mt-4 lg:mt-0">
-              <div className="headingContainer mb-6">
-                <AnimatedDiv
-                  className="text-[20px] lg:text-[25px] xl:text-[27px]  text-start font-bold text-gray-800 mb-4"
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ type: "spring", delay: 0.2 }}
-                  viewport={{ amount: 0, once: true }}
-                >
-                  Enquire Here
-                </AnimatedDiv>
-                <div className="w-[60px] border-b-[2px] border-red-700 mb-3"></div>
-              </div>
+              <HeadingP
+                first="Enquire Here"
+                baseColor="red-700"
+                fontSize="text-3xl"
+                boldness="!font-bold"
+                baseWidth="50px"
+                baseHeight="2px"
+                firstTextClasses="leading-8"
+              />
 
               <div>
                 <AdForm />

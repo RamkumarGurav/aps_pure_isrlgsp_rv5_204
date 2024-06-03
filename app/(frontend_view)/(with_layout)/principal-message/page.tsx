@@ -11,6 +11,7 @@ import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import AnimatedTitle from "@/components/Animated/AnimatedDiv";
 import AnimatedText from "@/components/Animated/AnimatedText";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
+import HeadingP from "@/components/Headings/HeadingP";
 
 export default function PMPageName() {
   return (
@@ -18,22 +19,16 @@ export default function PMPageName() {
       <Bedcrumb heading="Messages" pageName1="Principal's Message" />
       <section
         id="principalMsg"
-        className="py-[35px] sm:py-[50px] md:px-[35px] xl:px-[70px]  "
+        className="py-[35px] sm:py-[50px]  xl:px-[70px]  "
       >
-        <div className="px-4 ">
-          <div className="mx-auto ">
-            <AnimatedDiv
-              variants={springAnimate70pxFromBelow10}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
-            >
-              Principal &nbsp;
-              <span className="text-secondary-red1">Message</span>
-            </AnimatedDiv>
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </div>
-          <div className="principalMsgContainer bg-[#FAF6E2] pb-4">
+        <div className="">
+          <HeadingP
+            first="Principal's Message"
+            second="Message"
+            containerClasses="px-4"
+            boldness="!font-bold"
+          />
+          <div className="principalMsgContainer bg-[#FAF6E2] p-4">
             <div className=" lg:grid lg:grid-cols-2 p-4 pb-0">
               <div className="left">
                 <AnimatedTitle
@@ -41,7 +36,7 @@ export default function PMPageName() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true, amount: 0 }}
-                  className={`text-[#007BFF] text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold mb-3 `}
+                  className={`text-[#007BFF] text-lg sm:text-xl lg:text-2xl  font-semibold font-sans mb-3 `}
                 >
                   Ms. Sreelakshmi S.
                 </AnimatedTitle>
@@ -50,7 +45,7 @@ export default function PMPageName() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true, amount: 0 }}
-                  className={`text-[#e6272d] text-base xl:text-2xl font-semibold mb-3`}
+                  className={`text-[#e6272d] text-base font-semibold font-sans mb-2`}
                 >
                   Principal, M.A., B.Ed.
                 </AnimatedTitle>
@@ -59,7 +54,7 @@ export default function PMPageName() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true, amount: 0 }}
-                  className="leading-8  text-[#1d1d1d] mb-3"
+                  className="leading-8  font-sans text-[#333]"
                 >
                   &ldquo;Better than a thousand days of diligent study is one
                   day with a great teacher.&rdquo;
@@ -69,7 +64,7 @@ export default function PMPageName() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true, amount: 0 }}
-                  className={`   leading-8  text-[#1d1d1d] mb-3`}
+                  className={`  mt-3 leading-8  font-sans text-[#333]`}
                 >
                   {" "}
                   At Appolo, we believe that education cannot be limited merely
@@ -85,7 +80,7 @@ export default function PMPageName() {
               </div>
               <div className="right flex  justify-center items-start pt-0  px-2">
                 <div
-                  className="p-4 
+                  className="
                "
                 >
                   <AnimatedDiv
@@ -93,7 +88,7 @@ export default function PMPageName() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, type: "tween" }}
                     viewport={{ once: true, amount: 0 }}
-                    className="flex justify-stretch  p-10 pb-0 "
+                    className="flex justify-stretch   pb-0 "
                   >
                     <div className="   ">
                       <Image
@@ -113,7 +108,7 @@ export default function PMPageName() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, type: "tween" }}
               viewport={{ once: true, amount: 0 }}
-              className={`px-4  mb-3 leading-8  text-[#1d1d1d]`}
+              className={`  mt-3 leading-8  font-sans text-[#333] px-4`}
             >
               {" "}
               We strongly believe in continual evolvement of teaching-learning
@@ -126,7 +121,7 @@ export default function PMPageName() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, type: "tween" }}
               viewport={{ once: true, amount: 0 }}
-              className={`px-4 mb-3  leading-8  text-[#1d1d1d]`}
+              className={`  mt-3 leading-8  font-sans text-[#333] px-4`}
             >
               {" "}
               In light of the utmost and superior outcome of our students, we

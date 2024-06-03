@@ -23,7 +23,7 @@ export default function NEPageName() {
             whileInView={"onscreen"}
             viewport={{ once: true, amount: 0 }}
           >
-            <div className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-2">
+            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
               {eventsDetails.mainHeadingList[0]} &nbsp;
               <span className="text-secondary-red1">
                 {eventsDetails.mainHeadingList[1]}

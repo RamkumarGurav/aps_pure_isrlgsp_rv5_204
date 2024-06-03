@@ -89,7 +89,7 @@ export default function CUPageName() {
             <div className="left ">
               <div className="headingContainer mb-6">
                 <AnimatedDiv
-                  className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
+                  className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-4"
                   variants={springAnimate70pxFromBelow10}
                   initial={"offscreen"}
                   whileInView={"onscreen"}
@@ -170,7 +170,7 @@ export default function CUPageName() {
             <div className="right">
               <div className="headingContainer mb-6">
                 <AnimatedDiv
-                  className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
+                  className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-4"
                   variants={springAnimate70pxFromBelow10}
                   initial={"offscreen"}
                   whileInView={"onscreen"}

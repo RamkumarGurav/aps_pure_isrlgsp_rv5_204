@@ -19,6 +19,8 @@ import AnimatedText from "@/components/Animated/AnimatedText";
 import AnimatedTitle from "@/components/Animated/AnimatedDiv";
 import ToppersCarousel from "@/components/Carousels/ToppersCarousel";
 import MsgsCarousel from "@/components/Carousels/MsgsCarousel";
+import HeadingP from "@/components/Headings/HeadingP";
+import HeadingCenterP from "@/components/Headings/HeadingCenterP";
 /*****************************************************
            page
 *****************************************************/
@@ -33,27 +35,15 @@ export default function Home() {
 
       <section
         id="aboutAps"
-        className={`aboutApsContainer py-[35px] sm:py-[50px] md:px-[35px] xl:px-[70px]`}
+        className={`aboutApsContainer py-[35px] sm:py-[50px] px-4 xl:px-[70px]`}
       >
-        <div className={` px-4 mx-auto overflow-hidden`}>
-          <div className="aboutApsContainer grid lg:grid-cols-2 gap-8">
+        <div className={`  mx-auto overflow-hidden`}>
+          <div className="aboutApsContainer grid lg:grid-cols-2 gap-x-8 gap-y-4 ">
             <div className="">
-              <AnimatedDiv
-                className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
-                variants={springAnimateFromBelow10}
-                initial={"offscreen"}
-                whileInView={"onscreen"}
-                viewport={{ once: true, amount: 0.2 }}
-              >
-                About &nbsp;
-                <span className="text-secondary-red1">
-                  Appolo Public School
-                </span>
-              </AnimatedDiv>
+              <HeadingP first="About" second="Appolo Public School" />
 
-              <div className="w-[100px] border-b-[4px] border-red-500 "></div>
               <AnimatedText
-                className={`  mt-3 leading-8  text-[#1d1d1d]`}
+                className={`  mt-3 leading-8   text-[#1d1d1d]`}
                 variants={tweenAnimate100pxFromBelow10}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
@@ -96,28 +86,17 @@ export default function Home() {
       </section>
       <section
         id="chairpersonMsg"
-        className="py-[35px] sm:py-[50px] md:px-[35px] xl:px-[70px]  "
+        className="py-[35px] sm:py-[50px]  xl:px-[70px]  "
       >
-        <div className="px-4">
-          <div className="mx-auto flex flex-col justify-center items-center ">
-            <AnimatedDiv
-              className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
-              variants={springAnimateFromBelow10}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              Chairperson Message
-            </AnimatedDiv>
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </div>
+        <div className="">
+          <HeadingCenterP first="Chairperson Message" />
           <AnimatedDiv
             className="chairpersonMsgContainer bg-[#FAF6E2] "
             variants={easeInOutAnimate2timesShake10}
             whileInView={"onscreen"}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0 }}
           >
-            <div className=" grid lg:grid-cols-2 p-8 px-10">
+            <div className=" grid lg:grid-cols-2 p-8 gap-y-4 gap-x-8 px-10">
               <div className="">
                 <AnimatedTitle
                   className={`text-[#007BFF] text-lg sm:text-xl font-bold mb-2 `}
@@ -203,22 +182,11 @@ export default function Home() {
       </section>
       <section
         id="principalMsg"
-        className="py-[35px] sm:py-[50px] md:px-[35px] xl:px-[70px] "
+        className="py-[35px] sm:py-[50px]  xl:px-[70px] "
       >
-        <div className="px-4">
-          {" "}
-          <div className="mx-auto flex flex-col justify-center items-center ">
-            <AnimatedDiv
-              className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
-              variants={springAnimateFromBelow10}
-              initial={"offscreen"}
-              whileInView={"onscreen"}
-              viewport={{ once: true, amount: 0.2 }}
-            >
-              Principal Message
-            </AnimatedDiv>
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </div>
+        <div className="">
+          <HeadingCenterP first="Principal Message" />
+
           <AnimatedDiv
             className="principalMsgContainer bg-[#FAF6E2] "
             variants={easeInOutAnimate2timesShake10}
@@ -305,26 +273,15 @@ export default function Home() {
       </section>
       <section
         id="toppers"
-        className="py-[35px] sm:py-[50px] md:px-[35px] xl:px-[70px]bg-[#F9F9F9] z-0"
+        className="py-[35px] sm:py-[50px] px-4 xl:px-[70px] bg-[#F9F9F9] z-0"
       >
-        <div className="mx-auto flex flex-col justify-center items-center my-4 px-4">
-          <AnimatedDiv
-            className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
-            variants={springAnimateFromBelow10}
-            initial={"offscreen"}
-            whileInView={"onscreen"}
-            viewport={{ once: true, amount: 0.2 }}
-          >
-            Toppers
-          </AnimatedDiv>
-          <div className="w-[100px] border-b-[4px] border-red-500"></div>
-        </div>
+        <HeadingCenterP first="Toppers" />
         <AnimatedDiv
           variants={springAnimateFromBelow10}
           initial={"offscreen"}
           whileInView={"onscreen"}
           viewport={{ once: true, amount: 0.2 }}
-          className="toppersContainer min-h-[400px] py-2 px-4"
+          className="toppersContainer min-h-[400px] py-2  "
         >
           <ToppersCarousel />
         </AnimatedDiv>
@@ -334,7 +291,7 @@ export default function Home() {
         className=" object-cover z-0 "
         style={{ backgroundImage: "url(../../trust_bg.jpg)" }}
       >
-        <div className=" bg-[#25304ae7] py-[35px] sm:py-[50px] md:px-[35px] xl:px-[70px] w-full h-full">
+        <div className=" bg-[#25304ae7] py-[35px] sm:py-[50px] px-4 xl:px-[70px] w-full h-full">
           <div className="mx-auto flex flex-col justify-center items-center my-4 px-4">
             <AnimatedDiv
               className="text-2xl md:text-4xl text-start font-bold text-gray-100 mb-4"

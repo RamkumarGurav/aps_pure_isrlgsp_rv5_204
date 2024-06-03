@@ -1,8 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Roboto } from "next/font/google";
-const font = Roboto({ weight: "400", subsets: ["latin"] });
+import { Nunito } from "next/font/google";
+const font = Nunito({ weight: "400", subsets: ["latin"] });
 
 export default function MovingMessage({
   message,
@@ -13,24 +13,26 @@ export default function MovingMessage({
 }) {
   return (
     <div
-      id="movingNotificationContainer"
-      className={`overflow-hidden  flex  items-center   ${classes} font-semibold w-full h-[35.5px] flex items-center`}
+      style={{ overflow: "hidden", whiteSpace: "nowrap", width: "100%" }}
+      className={`overflow-hidden w-full px-4 xl:px-[70px]  ||  flex  items-center  ||  h-[35.5px]  ${classes}`}
     >
-      <AnimatePresence>
+      <div
+        style={{ overflow: "hidden", whiteSpace: "nowrap", width: "100%" }}
+        className="overflow-hidden w-full  relative"
+      >
         <motion.div
-          key="notification"
-          initial={{ x: "99vw", opacity: 1 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{
-            type: "just",
-            ease: "linear",
-            duration: 15,
-            repeat: Infinity,
-          }}
+          className=" mx-auto"
+          initial={{ x: "100vw", opacity: 1 }}
+          animate={{ x: "-200px", opacity: 1 }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          style={{ display: "inline-block" }}
         >
-          <span className={`font-medium ${font.className}`}> {message}</span>
+          <span className={`font-normal font-sans ${font.className} `}>
+            {" "}
+            {message}
+          </span>
         </motion.div>
-      </AnimatePresence>
+      </div>
     </div>
   );
 }

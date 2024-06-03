@@ -75,18 +75,20 @@ export default function Navbar({
 
       <div
         className={`min-w-[100%] bg-yellow-muted sticky top-[-2px] left-0 right-0 ${
-          isSticky ? "h-[70.77px] lg:h-[84px]" : "h-[74.88px] lg:h-[100px]"
+          isSticky
+            ? "h-[70.77px] lg:h-[84px] shadow-b"
+            : "h-[74.88px] lg:h-[100px]"
         }   
          
-        flex items-center text-gray-900 font-serif w-full  h-full md:px-[35px] xl:px-[70px] ${
+        flex items-center text-gray-900 font-serif w-full  h-full px-4 xl:px-[70px] ${
           font.className
-        }  shadow-b
+        }  
          z-[998]
         `}
         ref={mainNavBarRef}
       >
         <div
-          className={`wrapperToMakeZindexWork w-full h-full  bg-yellow-muted  px-4 pb-1  
+          className={`wrapperToMakeZindexWork w-full h-full  bg-yellow-muted   pb-1  
          z-[997]`}
         >
           <div className=" h-full  flex items-center  justify-between    ">
@@ -100,7 +102,7 @@ export default function Navbar({
                   isSticky
                     ? " h-[56px] sm:h-[62px]"
                     : " h-[46px] sm:h-[81.14px]"
-                } transition-all`}
+                } transition-all duration-300 ease-in-out`}
                 // placeholder="blur"
                 priority
               />

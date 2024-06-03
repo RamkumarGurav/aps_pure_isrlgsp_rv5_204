@@ -1,8 +1,8 @@
 /*** nextjs ***/
 import Image from "next/image";
 /*** fonts ***/
-import { Lato } from "next/font/google";
-const font = Lato({ weight: "400", subsets: ["latin"] });
+import { Nunito } from "next/font/google";
+const font = Nunito({ weight: "400", subsets: ["latin"] });
 /*** images ***/
 import AbouApsImg from "@/public/abt-img.jpg";
 /*** components ***/
@@ -16,35 +16,28 @@ import {
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import AnimatedText from "@/components/Animated/AnimatedText";
+import HeadingP from "@/components/Headings/HeadingP";
 
 export default function AUPageName() {
   return (
     <div className={`${font.className}  relative z-[1] overflow-hidden`}>
-      <Bedcrumb heading="Contact Us" pageName1="Contact Us" />
+      <Bedcrumb heading="About Us" pageName1="About Us" />
 
       <section
-        id="contactUsSection "
-        className={`contactUsSection py-[35px] sm:py-[50px] md:px-[35px] xl:px-[70px] overflow-hidden`}
+        id="AboutUsSection "
+        className={`AboutUsSection py-[35px] sm:py-[50px]px-4 xl:px-[70px] overflow-hidden`}
       >
         <div className={` px-4 mx-auto `}>
           <div>
             <div className={`grid lg:grid-cols-2`}>
               <div className="left ">
-                <div className="headingContainer mb-6">
-                  <AnimatedDiv
-                    className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-4"
-                    variants={springAnimateFromBelow10}
-                    initial={"offscreen"}
-                    whileInView={"onscreen"}
-                    viewport={{ once: true, amount: 0.2 }}
-                  >
-                    About &nbsp;
-                    <span className="text-secondary-red1">Us</span>
-                  </AnimatedDiv>
-                  <div className="w-[100px] border-b-[3px] border-red-500 mb-3"></div>
-                </div>
+                <HeadingP
+                  first="About Us"
+                  boldness="!font-bold"
+                  baseWidth="70px"
+                />
                 <AnimatedText
-                  className={` font-sans mt-3 leading-7 text-[16px]  text-[#1d1d1d]`}
+                  className={` font-sans ${font.className} mt-3 leading-7 text-[16px]  text-[#1d1d1d]`}
                   variants={tweenAnimateFromLeft10}
                   initial={"offscreen"}
                   whileInView={"onscreen"}

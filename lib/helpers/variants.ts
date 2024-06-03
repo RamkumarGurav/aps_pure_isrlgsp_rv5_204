@@ -1,3 +1,14 @@
+export const springAnimateFromBelow00 = {
+  offscreen: { y: 70, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+    },
+  },
+};
+
 export const springAnimateFromBelow10 = {
   offscreen: { y: 70, opacity: 0 },
   onscreen: {

@@ -22,13 +22,13 @@ export default function NavLinks({
     <div
       className={`hidden ${
         font.className
-      } h-full lg:flex  items-stretch justify-evenly transition-all ${
-        isSticky ? "gap-2" : "gap-0"
-      }`}
+      } h-full lg:flex  items-stretch justify-evenly  ${
+        isSticky ? "gap-2 text-base " : "gap-0 text-sm"
+      } transition-all duration-300 ease-in-out`}
     >
       <Link
         href={navLinks.home.link}
-        className={`navLink  flex justify-center items-center   `}
+        className={`navLink  flex justify-center items-center `}
       >
         {navLinks.home.name}
       </Link>
@@ -115,7 +115,7 @@ export default function NavLinks({
       </div>
       <Link
         href={navLinks.facilities.link}
-        className={`navLink flex justify-center items-center`}
+        className={`navLink flex justify-center items-center `}
       >
         {navLinks.facilities.name}
       </Link>

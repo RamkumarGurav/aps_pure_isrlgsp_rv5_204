@@ -75,7 +75,7 @@ export default function ToppersCarousel() {
         }}
       >
         <SwiperSlide>
-          <div className="text-center   w-[300px]  py-4 px-4  ">
+          <div className="text-center   w-[300px]  py-4   ">
             <div className="topperCard rounded bg-[#F8F5E4] w-[260px]  shadow-lg pb-2 mx-auto">
               <div
                 id="image-container"

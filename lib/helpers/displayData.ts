@@ -149,7 +149,7 @@ export let footerQuickLinks = [
   },
   {
     text: "Gallery",
-    link: "/gallery/2",
+    link: "/gallery/2023-24",
   },
   {
     text: "Contact Us",

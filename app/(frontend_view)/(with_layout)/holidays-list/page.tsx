@@ -23,7 +23,7 @@ export default function HLPageName() {
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true, amount: 0 }}
-            className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-2"
+            className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2"
           >
             {holidayCalendarDetails.mainHeadingList[0]} &nbsp;
             <span className="text-secondary-red1">

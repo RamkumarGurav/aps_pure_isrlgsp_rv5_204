@@ -12,8 +12,8 @@ const font = Roboto({ weight: "400", subsets: ["latin"] });
 
 const FooterTop = () => {
   return (
-    <footer
-      className={`bg-[#1A2742]  text-white md:px-[35px] xl:px-[70px] py-[50px] ${font.className} font-sans`}
+    <div
+      className={`bg-[#1A2742]  text-white px-4 xl:px-[70px] py-[50px] ${font.className} font-sans`}
     >
       <div className=" px-4 mx-auto ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-10">
@@ -23,19 +23,19 @@ const FooterTop = () => {
               exit={{ opacity: 0, y: 50 }} // Animation when component exits
               transition={{ duration: 1.5 }} // Animation duration
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true, amount: 0 }}
             >
-              <h4 className=" mb-4 text-xl font-medium tracking-wide">
+              <h4 className=" mb-4 text-xl font-medium font-sans tracking-wide text-center md:text-start">
                 Quick Links
               </h4>
-              <ul className="footer_nav2 list-unstyled space-y-2">
+              <ul className="footer_nav2 list-unstyled  ||  flex flex-col items-center md:items-start gap-y-3">
                 {footerQuickLinks.slice(0, 4).map((item, i) => (
-                  <li key={i} className=" my-2 flex items-center justify-start">
-                    <FaAngleRight className="text-red-600" />
+                  <li key={i} className=" flex items-center justify-start">
+                    <FaAngleRight className="text-red-700/70" />
                     <Link
                       href={`${item.link}`}
                       title="Website Design"
-                      className="footerQuickLink text-gray-400   hover:text-red-600"
+                      className="footerQuickLink text-gray-400  font-sans hover:text-red-600"
                     >
                       {item.text}
                     </Link>
@@ -48,21 +48,21 @@ const FooterTop = () => {
             <motion.div
               initial={{ opacity: 0, y: 100 }} // Initial position, animate from bottom
               exit={{ opacity: 0, y: 50 }} // Animation when component exits
-              transition={{ duration: 1.5 }} // Animation duration
+              transition={{ duration: 1.5, delay: 1 }} // Animation duration
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true, amount: 0 }}
             >
               <h4 className=" mb-4 text-xl font-semibold tracking-wide">
                 &nbsp;
               </h4>
-              <ul className="footer_nav2 list-unstyled space-y-2">
+              <ul className="footer_nav2 list-unstyled  ||  flex flex-col items-center md:items-start gap-y-3">
                 {footerQuickLinks.slice(4).map((item, i) => (
-                  <li key={i} className=" my-2 flex items-center justify-start">
-                    <FaAngleRight className="text-red-600" />
+                  <li key={i} className=" flex items-center justify-start">
+                    <FaAngleRight className="text-red-700/70" />
                     <Link
                       href={`${item.link}`}
                       title="Website Design"
-                      className="footerQuickLink text-gray-400   hover:text-red-600"
+                      className="footerQuickLink text-gray-400  font-sans  hover:text-red-600"
                     >
                       {item.text}
                     </Link>
@@ -77,28 +77,29 @@ const FooterTop = () => {
               exit={{ opacity: 0, y: 50 }} // Animation when component exits
               transition={{ duration: 1.5 }} // Animation duration
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true, amount: 0 }}
             >
-              <h4 className=" mb-4 text-xl font-medium tracking-wide">
+              <h4 className=" mb-4 text-xl font-medium font-sans tracking-wide text-center md:text-start">
                 Contact Us
               </h4>
-              <ul className="footer_nav2 list-unstyled space-y-2">
+              <ul className="footer_nav2 list-unstyled space-y-2 flex flex-col items-center md:items-start">
                 <li className=" mb-4 flex  ">
-                  <div className=" ">
+                  <div className="pt-[5px] ">
                     {" "}
-                    <IoLocationSharp size={15} className="text-red-600 mr-4" />
+                    <IoLocationSharp
+                      size={15}
+                      className="text-red-600 mr-[1px]"
+                    />
                   </div>
 
-                  <div
-                    className={`footerQuickLink text-gray-400   ${font.className} font-sans`}
-                  >
+                  <div className={`footerQuickLink text-gray-400   font-sans`}>
                     {footerContactUs.address}
                   </div>
                 </li>
                 <li className=" mb-4 flex  ">
-                  <div className=" ">
+                  <div className="pt-[5px] ">
                     {" "}
-                    <FaPhone size={12} className="text-red-600 mr-4" />
+                    <FaPhone size={12} className="text-red-600 mr-[1px]" />
                   </div>
 
                   <div
@@ -107,7 +108,7 @@ const FooterTop = () => {
                   >
                     {footerContactUs.phoneNumbers.map(
                       (item: string, i: number) => (
-                        <div className="" key={i}>
+                        <div className="font-sans" key={i}>
                           +91{item}
                         </div>
                       )
@@ -115,14 +116,14 @@ const FooterTop = () => {
                   </div>
                 </li>
                 <li className=" mb-4 flex  ">
-                  <div className=" ">
+                  <div className="pt-[5px] ">
                     {" "}
-                    <MdEmail size={15} className="text-red-600 mr-4" />
+                    <MdEmail size={15} className="text-red-600 mr-[1px]" />
                   </div>
 
                   <div
                     title="Website Design"
-                    className="footerQuickLink text-gray-400  "
+                    className="footerQuickLink font-sans text-gray-400  "
                   >
                     {footerContactUs.email}
                   </div>
@@ -134,9 +135,9 @@ const FooterTop = () => {
             <motion.div
               initial={{ opacity: 0, y: 100 }} // Initial position, animate from bottom
               exit={{ opacity: 0, y: 50 }} // Animation when component exits
-              transition={{ duration: 1.5 }} // Animation duration
+              transition={{ duration: 1.5, delay: 1 }} // Animation duration
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
+              viewport={{ once: true, amount: 0 }}
             >
               <div className="w-full h-full bg-white">
                 <iframe
@@ -152,7 +153,7 @@ const FooterTop = () => {
       </div>
 
       <div></div>
-    </footer>
+    </div>
   );
 };
 
