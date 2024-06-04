@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Logo from "@/public/logo_rb2.png";
+import Logo from "@/public/logo.png";
 import { useEffect, useRef, useState } from "react";
 import { GrFormClose } from "react-icons/gr";
 import { FaBars } from "react-icons/fa";
@@ -92,7 +92,7 @@ export default function Navbar({
          z-[997]`}
         >
           <div className=" h-full  flex items-center  justify-between    ">
-            <Link href="/" className="p-1">
+            <Link href="/" className="">
               <Image
                 src={Logo}
                 alt="logo"
@@ -100,9 +100,9 @@ export default function Navbar({
                 height={200}
                 className={`w-auto object-cover   ${
                   isSticky
-                    ? " h-[56px] sm:h-[62px]"
-                    : " h-[46px] sm:h-[81.14px]"
-                } transition-all duration-300 ease-in-out`}
+                    ? " h-[56px] sm:h-[71px]"
+                    : " h-[46px] sm:h-[84.14px]"
+                } transition-all duration-700 ease-in-out`}
                 // placeholder="blur"
                 priority
               />

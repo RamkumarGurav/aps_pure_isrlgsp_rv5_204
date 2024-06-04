@@ -2,8 +2,8 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import Modal from "./Modal";
 import Image from "next/image";
+import Modal from "./Modal";
 import GalleryCarousel from "../Carousels/GalleryCarousel";
 
 export default function GalleryModalContainer({

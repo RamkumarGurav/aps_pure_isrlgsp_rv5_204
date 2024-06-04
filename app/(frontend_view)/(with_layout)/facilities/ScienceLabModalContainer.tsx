@@ -13,8 +13,11 @@ import scienceLab6 from "@/public/science-lab/4.jpg";
 /*** components ***/
 import { defaultBlurDataUrl } from "@/lib/helpers/displayData";
 /*** dynamic components ***/
-const Carousel = dynamic(() => import("./Carousel"), { ssr: false });
-const Modal = dynamic(() => import("@/components/GalleryDetails/Modal"), {
+
+const Carousel = dynamic(() => import("./Carousel"), {
+  ssr: false,
+});
+const Modal = dynamic(() => import("./CarouselModal"), {
   ssr: false,
 });
 

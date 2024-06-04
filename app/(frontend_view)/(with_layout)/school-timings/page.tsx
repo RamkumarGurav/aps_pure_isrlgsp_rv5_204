@@ -4,13 +4,17 @@ const font = Poppins({ weight: "400", subsets: ["latin"] });
 /*** components ***/
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import AnimatedTitle from "@/components/Animated/AnimatedDiv";
-import { springAnimate70pxFromBelow10 } from "@/lib/helpers/variants";
+import {
+  springAnimate70pxFromBelow10,
+  tweenAnimateFromLeft10,
+} from "@/lib/helpers/variants";
 import AnimatedTd from "@/components/Animated/AnimatedTd";
 import AnimatedTh from "@/components/Animated/AnimatedTh";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
 import { schoolTimingsDetails } from "@/lib/helpers/displayData";
+import HeadingP from "@/components/Headings/HeadingP";
 
-export default function SMPageName() {
+export default function STPageName() {
   return (
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>
       <Bedcrumb heading="Academics" pageName1="School Timings" />
@@ -18,60 +22,46 @@ export default function SMPageName() {
       <section
         className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]   `}
       >
-        <div className={` p-4 mx-auto   `}>
-          <AnimatedDiv
-            initial={{ opacity: 0, x: "40vw" }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, type: "spring", stiffness: 120 }}
-            viewport={{ once: true, amount: 0 }}
-          >
-            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2 ">
-              {" "}
-              School &nbsp;
-              <span className="text-secondary-red1 ">Timings</span>
-            </div>
-
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </AnimatedDiv>
-          <div className="grid md:grid-cols-2 gap-8 mt-2">
+        <div className={`overflow-hidden  ||  p-4 mx-auto   `}>
+          <HeadingP first="School" second="Timings" boldness="!font-bold" />
+          <div className="grid md:grid-cols-2 gap-8 mt-2 px-4">
             <div className="leftBox">
-              <AnimatedTitle
-                variants={springAnimate70pxFromBelow10}
+              <AnimatedDiv
+                variants={tweenAnimateFromLeft10}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
                 viewport={{ once: true, amount: 0 }}
-                className="text-lg md:text-2xl text-start font-bold text-gray-900 mb-2"
               >
-                {schoolTimingsDetails.mondayToFridayTimingsData.mainHeading}
-              </AnimatedTitle>
-              <div className="w-[100px] border-b-[3px] border-red-700 mb-2"></div>
+                <h2
+                  className={`text-lg md:text-[27px] text-start !font-semibold  leading-8  text-gray-800 mb-3  || ${font.className} 
+                 `}
+                >
+                  {schoolTimingsDetails.mondayToFridayTimingsData.mainHeading}
+                </h2>
+                <div className="w-[50px] border-b-[2px] border-red-700 mb-2">
+                  <span></span>
+                </div>
+              </AnimatedDiv>
+
               <div className="flex flex-col">
                 <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
                   <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                     <div className="overflow-hidden">
                       <table className="min-w-full border border-neutral-200 text-center text-sm font-light text-surface dark:border-white/10 dark:text-white">
-                        <thead className="border-b text-gray-800 border-neutral-200  bg-gray-50 dark:border-white/10">
+                        <thead className="border-b text-gray-700 font-sans border-neutral-200  bg-gray-50 dark:border-white/10">
                           <tr>
-                            <AnimatedTh
-                              variants={springAnimate70pxFromBelow10}
-                              initial={"offscreen"}
-                              whileInView={"onscreen"}
-                              viewport={{ once: true, amount: 0 }}
+                            <th
                               scope="col"
-                              className="border-e border-neutral-200 px-6 py-4 dark:border-white/10"
+                              className="font-sans font-medium || border-e  border-neutral-200 px-6 py-4 dark:border-white/10"
                             >
                               TIMINGS
-                            </AnimatedTh>
-                            <AnimatedTh
-                              variants={springAnimate70pxFromBelow10}
-                              initial={"offscreen"}
-                              whileInView={"onscreen"}
-                              viewport={{ once: true, amount: 0 }}
+                            </th>
+                            <th
                               scope="col"
-                              className="border-e border-neutral-200 px-6 py-4 dark:border-white/10"
+                              className="font-sans font-medium  || border-e border-neutral-200 px-6 py-4 dark:border-white/10"
                             >
                               PERIOD
-                            </AnimatedTh>
+                            </th>
                           </tr>
                         </thead>
                         <tbody>
@@ -83,30 +73,18 @@ export default function SMPageName() {
                                   (i + 2) % 2 == 1 ? "bg-gray-50" : ""
                                 } border-neutral-200 dark:border-white/10`}
                               >
-                                <AnimatedTd
-                                  initial={{ opacity: 0 }}
-                                  animate={{
-                                    opacity: 1,
-                                    rotateX: [0, 360, 0, 360, 0],
-                                  }}
-                                  transition={{ delay: i * 0.2, duration: 1.3 }}
-                                  viewport={{ once: true, amount: 0 }}
-                                  className="whitespace-nowrap border-e border-neutral-200 px-6 py-4 dark:border-white/10"
+                                <td
+                                  className="whitespace-nowrap border-e border-neutral-200 px-6 py-4  || 
+                                font-sans text-gray-700 font-normal ||  dark:border-white/10"
                                 >
                                   {item.timing}
-                                </AnimatedTd>
-                                <AnimatedTd
-                                  initial={{ opacity: 0 }}
-                                  animate={{
-                                    opacity: 1,
-                                    rotateX: [0, 360, 0, 360, 0],
-                                  }}
-                                  transition={{ delay: i * 0.2, duration: 1.3 }}
-                                  viewport={{ once: true, amount: 0 }}
-                                  className="whitespace-nowrap border-e border-neutral-200 px-6 py-4 dark:border-white/10"
+                                </td>
+                                <td
+                                  className="whitespace-nowrap border-e border-neutral-200 px-6 py-4   
+                                 ||  font-sans text-gray-700 font-normal || dark:border-white/10"
                                 >
                                   {item.period}
-                                </AnimatedTd>
+                                </td>
                               </tr>
                             )
                           )}
@@ -118,43 +96,42 @@ export default function SMPageName() {
               </div>
             </div>
             <div className="rightBox">
-              <AnimatedTitle
-                variants={springAnimate70pxFromBelow10}
+              <AnimatedDiv
+                variants={tweenAnimateFromLeft10}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
                 viewport={{ once: true, amount: 0 }}
-                className="text-lg md:text-2xl text-start font-bold text-gray-900 mb-2"
               >
-                {schoolTimingsDetails.saturdayTimingsData.mainHeading}
-              </AnimatedTitle>
-              <div className="w-[100px] border-b-[3px] border-red-700 mb-2"></div>
+                <h2
+                  className={`text-lg md:text-[27px] text-start !font-semibold  leading-8  text-gray-800 mb-3  || ${font.className} 
+                 `}
+                >
+                  {schoolTimingsDetails.saturdayTimingsData.mainHeading}
+                </h2>
+                <div className="w-[50px] border-b-[2px] border-red-700 mb-2">
+                  <span></span>
+                </div>
+              </AnimatedDiv>
+
               <div className="flex flex-col">
                 <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
                   <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                     <div className="overflow-hidden">
                       <table className="min-w-full border border-neutral-200 text-center text-sm font-light text-surface dark:border-white/10 dark:text-white">
-                        <thead className="border-b text-gray-800 border-neutral-200  bg-gray-50 dark:border-white/10">
+                        <thead className="border-b text-gray-700 font-sans border-neutral-200  bg-gray-50 dark:border-white/10">
                           <tr>
-                            <AnimatedTh
-                              variants={springAnimate70pxFromBelow10}
-                              initial={"offscreen"}
-                              whileInView={"onscreen"}
-                              viewport={{ once: true, amount: 0 }}
+                            <th
                               scope="col"
-                              className="border-e border-neutral-200 px-6 py-4 dark:border-white/10"
+                              className="font-sans font-medium || border-e  border-neutral-200 px-6 py-4 dark:border-white/10"
                             >
                               TIMINGS
-                            </AnimatedTh>
-                            <AnimatedTh
-                              variants={springAnimate70pxFromBelow10}
-                              initial={"offscreen"}
-                              whileInView={"onscreen"}
-                              viewport={{ once: true, amount: 0 }}
+                            </th>
+                            <th
                               scope="col"
-                              className="border-e border-neutral-200 px-6 py-4 dark:border-white/10"
+                              className="font-sans font-medium  || border-e border-neutral-200 px-6 py-4 dark:border-white/10"
                             >
                               PERIOD
-                            </AnimatedTh>
+                            </th>
                           </tr>
                         </thead>
                         <tbody>
@@ -166,30 +143,18 @@ export default function SMPageName() {
                                   (i + 2) % 2 == 1 ? "bg-gray-50" : ""
                                 } border-neutral-200 dark:border-white/10`}
                               >
-                                <AnimatedTd
-                                  initial={{ opacity: 0 }}
-                                  animate={{
-                                    opacity: 1,
-                                    rotateX: [0, 360, 0, 360, 0],
-                                  }}
-                                  transition={{ delay: i * 0.2, duration: 1.3 }}
-                                  viewport={{ once: true, amount: 0 }}
-                                  className="whitespace-nowrap border-e border-neutral-200 px-6 py-4 dark:border-white/10"
+                                <td
+                                  className="whitespace-nowrap border-e border-neutral-200 px-6 py-4  || 
+                                font-sans text-gray-700 font-normal ||  dark:border-white/10"
                                 >
                                   {item.timing}
-                                </AnimatedTd>
-                                <AnimatedTd
-                                  initial={{ opacity: 0 }}
-                                  animate={{
-                                    opacity: 1,
-                                    rotateX: [0, 360, 0, 360, 0],
-                                  }}
-                                  transition={{ delay: i * 0.2, duration: 1.3 }}
-                                  viewport={{ once: true, amount: 0 }}
-                                  className="whitespace-nowrap border-e border-neutral-200 px-6 py-4 dark:border-white/10"
+                                </td>
+                                <td
+                                  className="whitespace-nowrap border-e border-neutral-200 px-6 py-4   
+                                 ||  font-sans text-gray-700 font-normal || dark:border-white/10"
                                 >
                                   {item.period}
-                                </AnimatedTd>
+                                </td>
                               </tr>
                             )
                           )}

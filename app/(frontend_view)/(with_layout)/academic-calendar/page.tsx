@@ -10,30 +10,20 @@ import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import AnimatedTd from "@/components/Animated/AnimatedTd";
 import AnimatedTh from "@/components/Animated/AnimatedTh";
+import HeadingP from "@/components/Headings/HeadingP";
 
 export default function PageName() {
   return (
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>
       <Bedcrumb heading="Academics" pageName1="Academic Calender" />
 
-      <section
-        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]   `}
-      >
+      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]   `}>
         <div className={` p-4 mx-auto   `}>
-          <AnimatedDiv
-            variants={springAnimate70pxFromBelow10}
-            initial={"offscreen"}
-            whileInView={"onscreen"}
-            viewport={{ once: true, amount: 0 }}
-            className="text-2xl md:text-4xl text-start font-bold text-gray-900 mb-2"
-          >
-            {academicCalendarDetails.mainHeadingList[0]} &nbsp;
-            <span className="text-secondary-red1">
-              {academicCalendarDetails.mainHeadingList[1]}
-            </span>
-          </AnimatedDiv>
-          <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-
+          <HeadingP
+            first={academicCalendarDetails.mainHeadingList[0]}
+            second={academicCalendarDetails.mainHeadingList[1]}
+            firstTextClasses="!font-bold"
+          />
           <div className="">
             <div className="flex flex-col">
               <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -42,35 +32,18 @@ export default function PageName() {
                     <table className="w-full lg:w-[800px] border border-neutral-200  text-sm font-light text-surface dark:border-white/10 dark:text-white">
                       <thead className="border-b text-gray-800 border-neutral-200  bg-gray-50 dark:border-white/10">
                         <tr>
-                          <AnimatedTh
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            // scope="col"
-                            className="border-e   border-neutral-200 text-left text-xs sm:text-base px-1 py-1 sm:px-6  sm:py-4  dark:border-white/10"
+                          <th
+                            className="border-e   border-neutral-200  || font-sans text-gray-700 font-semibold 
+                          text-left text-xs sm:text-sm  pl-2 dark:border-white/10"
                           >
                             Sl.No
-                          </AnimatedTh>
-                          <AnimatedTh
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            // scope="col"
-                            className="border-e border-neutral-200 text-left text-xs sm:text-base px-1 py-1 sm:px-6  sm:py-4 dark:border-white/10"
-                          >
+                          </th>
+                          <th className="border-e border-neutral-200  || font-sans text-gray-700 font-semibold text-left text-xs sm:text-sm pl-2 py-3  dark:border-white/10">
                             MONTH
-                          </AnimatedTh>
-                          <AnimatedTh
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            className="border-e border-neutral-200 text-left text-xs sm:text-base px-1 py-1 sm:px-6  sm:py-4 dark:border-white/10"
-                          >
+                          </th>
+                          <th className="border-e border-neutral-200  || font-sans text-gray-700 font-semibold text-left text-xs sm:text-sm pl-2 py-3    dark:border-white/10">
                             EVENTS
-                          </AnimatedTh>
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -82,55 +55,32 @@ export default function PageName() {
                                 (i + 2) % 2 == 1 ? "bg-gray-50" : ""
                               } border-neutral-200 dark:border-white/10`}
                             >
-                              <AnimatedTd
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{
-                                  opacity: 1,
-                                  y: 0,
-                                }}
-                                transition={{ duration: 1.3 }}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-xs sm:text-base px-1 py-1 sm:px-6  sm:py-4 dark:border-white/10"
+                              <td
+                                className="whitespace-nowrap border-e border-neutral-200
+                               text-xs sm:text-base pl-2 font-sans font-normal text-gray-800 dark:border-white/10"
                               >
                                 {i + 1}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                initial={{ opacity: 0, y: 50 }}
-                                whileInView={{
-                                  opacity: 1,
-                                  y: 0,
-                                }}
-                                transition={{ duration: 1.3 }}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-xs sm:text-base px-1 py-1 sm:px-6  sm:py-4 dark:border-white/10"
+                              </td>
+                              <td
+                                className="whitespace-nowrap border-e border-neutral-200 text-xs sm:text-base
+                              
+                              font-sans font-normal pl-2 text-gray-800 dark:border-white/10"
                               >
                                 {item.month}
-                              </AnimatedTd>
-                              <td className="whitespace-nowrap border-e border-neutral-200 text-xs sm:text-base px-1 py-1 sm:px-6  sm:py-4 dark:border-white/10">
+                              </td>
+                              <td className="whitespace-nowrap border-e border-neutral-200 text-xs sm:text-base pl-2 py-2 dark:border-white/10">
                                 {item.eventsList.map(
                                   (event: string, j: number) => (
-                                    <AnimatedDiv
-                                      key={j}
-                                      initial={{ opacity: 0, y: 50 }}
-                                      whileInView={{
-                                        opacity: 1,
-                                        y: 0,
-                                      }}
-                                      transition={{
-                                        duration: 1.3,
-                                      }}
-                                      viewport={{ once: true, amount: 0 }}
-                                      className=" flex gap-2 mb-3"
-                                    >
-                                      <span className="flex justify-center items-center pb-[1px]">
-                                        <FaRegHandPointRight className="text-red-700 text-[15px]  " />
+                                    <div className=" flex gap-1 mb-1">
+                                      <span className="flex justify-center items-center ">
+                                        <FaRegHandPointRight className="text-red-800  " />
                                       </span>
                                       <span
-                                        className={`text-gray-800 text-wrap  leading-8`}
+                                        className={`text-gray-500 text-wrap   font-sans font-normal   leading-8`}
                                       >
                                         {event}
                                       </span>
-                                    </AnimatedDiv>
+                                    </div>
                                   )
                                 )}
                               </td>

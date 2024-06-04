@@ -11,10 +11,11 @@ import knowledgeCentre2 from "@/public/knowledge-center/2.jpg";
 /*** components ***/
 import { defaultBlurDataUrl } from "@/lib/helpers/displayData";
 /*** components-d ***/
+
 const InfraGalleryCarousel = dynamic(() => import("./Carousel"), {
   ssr: false,
 });
-const Modal = dynamic(() => import("@/components/GalleryDetails/Modal"), {
+const Modal = dynamic(() => import("./CarouselModal"), {
   ssr: false,
 });
 export default function KCModalContainer() {

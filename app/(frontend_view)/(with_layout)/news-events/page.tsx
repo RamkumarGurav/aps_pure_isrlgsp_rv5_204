@@ -5,32 +5,21 @@ const font = Open_Sans({ weight: "400", subsets: ["latin"] });
 import { eventsDetails } from "@/lib/helpers/displayData";
 import { springAnimate70pxFromBelow10 } from "@/lib/helpers/variants";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
-import AnimatedTd from "@/components/Animated/AnimatedTd";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
+import HeadingP from "@/components/Headings/HeadingP";
 
 export default function NEPageName() {
   return (
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>
       <Bedcrumb heading="News and Events" pageName1="News and Events" />
 
-      <section
-        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]   `}
-      >
-        <div className={` p-4 mx-auto   `}>
-          <AnimatedDiv
-            variants={springAnimate70pxFromBelow10}
-            initial={"offscreen"}
-            whileInView={"onscreen"}
-            viewport={{ once: true, amount: 0 }}
-          >
-            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
-              {eventsDetails.mainHeadingList[0]} &nbsp;
-              <span className="text-secondary-red1">
-                {eventsDetails.mainHeadingList[1]}
-              </span>
-            </div>
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </AnimatedDiv>
+      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]   `}>
+        <div className={`  mx-auto   `}>
+          <HeadingP
+            first={eventsDetails.mainHeadingList[0]}
+            second={eventsDetails.mainHeadingList[1]}
+            boldness="!font-bold"
+          />
 
           <div className="">
             <div className="flex flex-col">
@@ -44,73 +33,41 @@ export default function NEPageName() {
                           className={`border-b bg-gray-50
                                border-neutral-200  table-`}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>TERM-I</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         <tr
                           className={`border-b  
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                          >
+                          <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                             SL.NO.
-                          </AnimatedTd>
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                          >
+                          </td>
+                          <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                             DATE
-                          </AnimatedTd>
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                          >
+                          </td>
+                          <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                             DAY
-                          </AnimatedTd>
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                          >
+                          </td>
+                          <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                             EVENT
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {/* //{--------------MAY-------------- */}
                         <tr
                           className={`border-b   bg-gray-50
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>MAY</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term1.may.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -121,46 +78,22 @@ export default function NEPageName() {
                                  (i + 2) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -170,16 +103,12 @@ export default function NEPageName() {
                           className={`border-b   
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>JUNE</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term1.june.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -190,46 +119,22 @@ export default function NEPageName() {
                                  (i + 3) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -239,16 +144,12 @@ export default function NEPageName() {
                           className={`border-b   
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>JULY</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term1.july.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -259,46 +160,22 @@ export default function NEPageName() {
                                  (i + 3) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -308,16 +185,12 @@ export default function NEPageName() {
                           className={`border-b   
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>AUGUST</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term1.august.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -328,46 +201,22 @@ export default function NEPageName() {
                                  (i + 3) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -377,16 +226,12 @@ export default function NEPageName() {
                           className={`border-b   bg-gray-50
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>SEPTEMBER</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term1.september.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -397,46 +242,22 @@ export default function NEPageName() {
                                  (i + 2) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -446,16 +267,12 @@ export default function NEPageName() {
                           className={`border-b   bg-gray-50
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>OCTOBER</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term1.october.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -466,46 +283,22 @@ export default function NEPageName() {
                                  (i + 2) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -514,74 +307,42 @@ export default function NEPageName() {
                           className={`border-b 
                                border-neutral-200  table-`}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>TERM-II</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {/* //{---------------TERM2-------------- */}
                         <tr
                           className={`border-b  bg-gray-50
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                          >
+                          <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                             SL.NO.
-                          </AnimatedTd>
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                          >
+                          </td>
+                          <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                             DATE
-                          </AnimatedTd>
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                          >
+                          </td>
+                          <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                             DAY
-                          </AnimatedTd>
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                          >
+                          </td>
+                          <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                             EVENT
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {/* //{--------------OCTOBER-------------- */}
                         <tr
                           className={`border-b   
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>MAY</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term2.october.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -592,46 +353,22 @@ export default function NEPageName() {
                                  (i + 3) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -641,16 +378,12 @@ export default function NEPageName() {
                           className={`border-b   bg-gray-50
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>NOVEMBER</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term2.november.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -661,46 +394,22 @@ export default function NEPageName() {
                                  (i + 2) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -710,16 +419,12 @@ export default function NEPageName() {
                           className={`border-b   
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>DECEMBER</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term2.december.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -730,46 +435,22 @@ export default function NEPageName() {
                                  (i + 3) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -779,16 +460,12 @@ export default function NEPageName() {
                           className={`border-b   
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>JANUARY</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term2.january.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -799,46 +476,22 @@ export default function NEPageName() {
                                  (i + 3) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -846,13 +499,9 @@ export default function NEPageName() {
                           className={`border-b   bg-gray-50
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={2}
-                            className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4"
+                            className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4"
                           >
                             <p className="text-wrap ">
                               {String(
@@ -860,14 +509,10 @@ export default function NEPageName() {
                                   .oneToTwo
                               )}
                             </p>
-                          </AnimatedTd>
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          </td>
+                          <td
                             colSpan={2}
-                            className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4"
+                            className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4"
                           >
                             <p className="text-wrap ">
                               {String(
@@ -875,7 +520,7 @@ export default function NEPageName() {
                                   .threToFour
                               )}
                             </p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {/* //--------------------------------------------------} */}
                         {/* //{-------------FEBRUARY--------------- */}
@@ -883,16 +528,12 @@ export default function NEPageName() {
                           className={`border-b   
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>FEBRUARY</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term2.february.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -903,46 +544,22 @@ export default function NEPageName() {
                                  (i + 3) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -952,16 +569,12 @@ export default function NEPageName() {
                           className={`border-b   bg-gray-50
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>MARCH</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term2.march.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -972,46 +585,22 @@ export default function NEPageName() {
                                  (i + 2) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}
@@ -1021,16 +610,12 @@ export default function NEPageName() {
                           className={`border-b bg-gray-50  
                                border-neutral-200 `}
                         >
-                          <AnimatedTd
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
+                          <td
                             colSpan={4}
-                            className="pt-2 pb-4 px-4"
+                            className="pt-2 pb-4 px-4 font-sans font-semibold text-gray-700"
                           >
                             <p>APRIL</p>
-                          </AnimatedTd>
+                          </td>
                         </tr>
                         {eventsDetails.term2.april.events.map(
                           (item: { [key: string]: any }, i: number) => (
@@ -1041,46 +626,22 @@ export default function NEPageName() {
                                  (i + 2) % 2 == 1 ? "bg-gray-50" : ""
                                } `}
                             >
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.slno}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="uppercase whitespace-nowrap border-e border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="uppercase whitespace-nowrap border-e font-sans font-semibold text-gray-700 border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                variants={springAnimate70pxFromBelow10}
-                                initial={"offscreen"}
-                                whileInView={"onscreen"}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 "
-                              >
+                              </td>
+                              <td className="whitespace-nowrap border-e font-sans font-semibold text-gray-700 min-w-[500px]  border-neutral-200 text-sm px-1 py-1 sm:px-6  sm:py-4 ">
                                 {item.eventsList.map((e: string, j: number) => (
                                   <p key={j} className="text-wrap ">
                                     {e}
                                   </p>
                                 ))}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}

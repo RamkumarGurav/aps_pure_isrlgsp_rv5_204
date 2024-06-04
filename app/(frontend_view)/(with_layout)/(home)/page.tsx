@@ -1,8 +1,8 @@
 /*** nextjs ***/
 import Image from "next/image";
 /*** fonts ***/
-import { Open_Sans } from "next/font/google";
-const font = Open_Sans({ weight: "400", subsets: ["latin"] });
+import { Nunito } from "next/font/google";
+const font = Nunito({ weight: "400", subsets: ["latin"] });
 /*** images ***/
 import AbouApsImg from "@/public/abt-img.jpg";
 import rajab from "@/public/rajab.jpg";
@@ -40,10 +40,14 @@ export default function Home() {
         <div className={`  mx-auto overflow-hidden`}>
           <div className="aboutApsContainer grid lg:grid-cols-2 gap-x-8 gap-y-4 ">
             <div className="">
-              <HeadingP first="About" second="Appolo Public School" />
+              <HeadingP
+                first="About"
+                second="Appolo Public School"
+                boldness="!font-bold"
+              />
 
               <AnimatedText
-                className={`  mt-3 leading-8   text-[#1d1d1d]`}
+                className={`  mt-3 leading-8 font-sans ${font.className} text-[#1d1d1d]`}
                 variants={tweenAnimate100pxFromBelow10}
                 initial={"offscreen"}
                 whileInView={"onscreen"}
@@ -117,7 +121,7 @@ export default function Home() {
                   Chairperson
                 </AnimatedTitle>
                 <AnimatedText
-                  className=" text-sm text-[#1d1d1d]"
+                  className={` text-[#1d1d1d] ${font.className}`}
                   initial={{ opacity: 0, x: "-20vw" }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1.5, type: "tween" }}
@@ -128,7 +132,7 @@ export default function Home() {
                 </AnimatedText>
 
                 <AnimatedText
-                  className={`text-sm  mt-3 leading-7  text-[#1d1d1d]`}
+                  className={`  mt-3 leading-7  text-[#1d1d1d]  ${font.className}`}
                   initial={{ opacity: 0, x: "-20vw" }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 2, type: "tween" }}
@@ -215,7 +219,7 @@ export default function Home() {
                   Principal, M.A., B.Ed
                 </AnimatedTitle>
                 <AnimatedText
-                  className="leading-7 text-sm text-[#1d1d1d]"
+                  className={` text-[#1d1d1d] ${font.className}`}
                   initial={{ opacity: 0, x: "-20vw" }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1.5, type: "tween" }}
@@ -225,7 +229,7 @@ export default function Home() {
                   day with a great teacher.&rdquo;
                 </AnimatedText>
                 <AnimatedText
-                  className={` text-sm mt-3 leading-7 text-[#1d1d1d]`}
+                  className={`  mt-3 leading-7  text-[#1d1d1d]  ${font.className}`}
                   initial={{ opacity: 0, x: "-20vw" }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 2, type: "tween" }}

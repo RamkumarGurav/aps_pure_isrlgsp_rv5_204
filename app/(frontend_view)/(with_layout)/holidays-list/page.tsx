@@ -8,30 +8,20 @@ import { springAnimate70pxFromBelow10 } from "@/lib/helpers/variants";
 import AnimatedTh from "@/components/Animated/AnimatedTh";
 import AnimatedTd from "@/components/Animated/AnimatedTd";
 import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
+import HeadingP from "@/components/Headings/HeadingP";
 
 export default function HLPageName() {
   return (
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>
       <Bedcrumb heading="Academics" pageName1="Holiday's list" />
 
-      <section
-        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]   `}
-      >
-        <div className={` p-4 mx-auto   `}>
-          <AnimatedDiv
-            variants={springAnimate70pxFromBelow10}
-            initial={"offscreen"}
-            whileInView={"onscreen"}
-            viewport={{ once: true, amount: 0 }}
-            className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2"
-          >
-            {holidayCalendarDetails.mainHeadingList[0]} &nbsp;
-            <span className="text-secondary-red1">
-              {holidayCalendarDetails.mainHeadingList[1]}
-            </span>
-          </AnimatedDiv>
-          <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-
+      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]   `}>
+        <div className={` mx-auto   `}>
+          <HeadingP
+            first={holidayCalendarDetails.mainHeadingList[0]}
+            second={holidayCalendarDetails.mainHeadingList[1]}
+            firstTextClasses="!font-bold"
+          />
           <div className="">
             <div className="flex flex-col">
               <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -40,46 +30,30 @@ export default function HLPageName() {
                     <table className="min-w-full lg:w-[800px] border border-neutral-200  text-sm font-light text-surface dark:border-white/10 dark:text-white">
                       <thead className="border-b text-gray-800 border-neutral-200  bg-gray-50 dark:border-white/10">
                         <tr>
-                          <AnimatedTh
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            // scope="col"
-                            className="border-e   border-neutral-200 text-left text-sm md:text-base px-3 py-2 md:px-6  md:py-4  dark:border-white/10"
+                          <th
+                            className="border-e   border-neutral-200  || font-sans text-gray-700 font-semibold 
+                          text-xs sm:text-sm  px-[2px] text-center py-3 dark:border-white/10"
                           >
                             Sl.No
-                          </AnimatedTh>
-                          <AnimatedTh
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            // scope="col"
-                            className="border-e border-neutral-200 text-left text-sm md:text-base px-3 py-2 md:px-6  md:py-4 dark:border-white/10"
+                          </th>
+                          <th
+                            className="border-e   border-neutral-200  || font-sans text-gray-700 font-semibold 
+                           text-xs sm:text-sm   pl-2 text-center py-3 dark:border-white/10"
                           >
                             MONTH AND DATE
-                          </AnimatedTh>
-                          <AnimatedTh
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            // scope="col"
-                            className="border-e border-neutral-200 text-left text-sm md:text-base px-3 py-2 md:px-6  md:py-4 dark:border-white/10"
+                          </th>
+                          <th
+                            className="border-e   border-neutral-200  || font-sans text-gray-700 font-semibold 
+                          text-left text-xs sm:text-sm   pl-2 py-3 dark:border-white/10"
                           >
                             DAY
-                          </AnimatedTh>
-                          <AnimatedTh
-                            variants={springAnimate70pxFromBelow10}
-                            initial={"offscreen"}
-                            whileInView={"onscreen"}
-                            viewport={{ once: true, amount: 0 }}
-                            // scope="col"
-                            className="border-e border-neutral-200 text-left text-sm md:text-base px-3 py-2 md:px-6  md:py-4 dark:border-white/10"
+                          </th>
+                          <th
+                            className="border-e   border-neutral-200  || font-sans text-gray-700 font-semibold 
+                          text-left text-xs sm:text-sm   pl-2 py-3 dark:border-white/10"
                           >
                             EVENT
-                          </AnimatedTh>
+                          </th>
                         </tr>
                       </thead>
                       <tbody>
@@ -91,54 +65,34 @@ export default function HLPageName() {
                                 (i + 2) % 2 == 1 ? "bg-gray-50" : ""
                               } border-neutral-200 dark:border-white/10`}
                             >
-                              <AnimatedTd
-                                initial={{ opacity: 0 }}
-                                whileInView={{
-                                  opacity: 1,
-                                  rotateX: [0, 360, 0, 360, 0],
-                                }}
-                                transition={{ delay: i * 0.02, duration: 1.3 }}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm md:text-base px-3 py-2 md:px-6  md:py-4 dark:border-white/10"
+                              <td
+                                className={`whitespace-nowrap border-e border-neutral-200
+                               text-xs sm:text-sm  px-[2px] py-2 ${font.className} font-sans font-normal
+                                text-gray-800 dark:border-white/10 text-center`}
                               >
                                 {i + 1}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                initial={{ opacity: 0 }}
-                                whileInView={{
-                                  opacity: 1,
-                                  rotateX: [0, 360, 0, 360, 0],
-                                }}
-                                transition={{ delay: i * 0.02, duration: 1.3 }}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm md:text-base px-3 py-2 md:px-6  md:py-4 dark:border-white/10"
+                              </td>
+                              <td
+                                className={`whitespace-nowrap border-e border-neutral-200
+                               text-xs sm:text-sm  pl-2 py-3 ${font.className} font-sans font-normal
+                                text-gray-800 dark:border-white/10`}
                               >
                                 {item.date}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                initial={{ opacity: 0 }}
-                                whileInView={{
-                                  opacity: 1,
-                                  rotateX: [0, 360, 0, 360, 0],
-                                }}
-                                transition={{ delay: i * 0.02, duration: 1.3 }}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm md:text-base px-3 py-2 md:px-6  md:py-4 dark:border-white/10"
+                              </td>
+                              <td
+                                className={`whitespace-nowrap border-e border-neutral-200
+                               text-xs sm:text-sm  pl-2 py-3 ${font.className} font-sans font-normal
+                                text-gray-800 dark:border-white/10`}
                               >
                                 {item.day}
-                              </AnimatedTd>
-                              <AnimatedTd
-                                initial={{ opacity: 0 }}
-                                whileInView={{
-                                  opacity: 1,
-                                  rotateX: [0, 360, 0, 360, 0],
-                                }}
-                                transition={{ delay: i * 0.02, duration: 1.3 }}
-                                viewport={{ once: true, amount: 0 }}
-                                className="whitespace-nowrap border-e border-neutral-200 text-sm md:text-base px-3 py-2 md:px-6  md:py-4 dark:border-white/10"
+                              </td>
+                              <td
+                                className={`whitespace-nowrap border-e border-neutral-200
+                               text-xs sm:text-sm  pl-2 py-3 ${font.className} font-sans font-normal
+                                text-gray-800 dark:border-white/10`}
                               >
                                 {item.event}
-                              </AnimatedTd>
+                              </td>
                             </tr>
                           )
                         )}

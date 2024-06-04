@@ -45,7 +45,7 @@ export default function CPageName() {
                       className=" flex gap-2 mb-1"
                     >
                       <span className="flex justify-center items-center pb-[1px]">
-                        <FaRegHandPointRight className="text-red-700 text-[15px] " />
+                        <FaRegHandPointRight className="text-red-800 text-[15px] " />
                       </span>
                       <span
                         className={`text-gray-800 font-sans leading-8 ${font.className}`}
@@ -82,7 +82,7 @@ export default function CPageName() {
                       className=" flex gap-2 mb-1"
                     >
                       <span className="flex justify-center items-center pb-[1px]">
-                        <FaRegHandPointRight className="text-red-700 text-[15px] " />
+                        <FaRegHandPointRight className="text-red-800 text-[15px] " />
                       </span>
                       <span
                         className={`text-gray-800 font-sans ${font.className} leading-8`}
@@ -99,8 +99,8 @@ export default function CPageName() {
                "
                 >
                   <AnimatedDiv
-                    initial={{ opacity: 0, scale: 0, rotate: 90 }}
-                    whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                    initial={{ opacity: 0, x: "20vw" }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 2, type: "spring" }}
                     viewport={{ once: true, amount: 0 }}
                     className="flex justify-stretch  p-0 pb-0 "
@@ -154,7 +154,7 @@ export default function CPageName() {
                         className=" flex gap-2 mb-1"
                       >
                         <span className="flex justify-center items-start pt-2 pb-[1px]">
-                          <FaRegHandPointRight className="text-red-700 text-[15px] " />
+                          <FaRegHandPointRight className="text-red-800 text-[15px] " />
                         </span>
                         <span className={`text-gray-800 font-sans leading-8`}>
                           {sub}
@@ -204,7 +204,7 @@ export default function CPageName() {
                   className=" flex gap-2 mb-1"
                 >
                   <span className="flex justify-center items-start pt-2 pb-[1px]">
-                    <FaRegHandPointRight className="text-red-700 text-[15px] " />
+                    <FaRegHandPointRight className="text-red-800 text-[15px] " />
                   </span>
                   <span className={`text-gray-800 font-sans leading-8`}>
                     {item}
@@ -240,7 +240,7 @@ export default function CPageName() {
                   className=" flex gap-2 mb-1"
                 >
                   <span className="flex justify-center items-start pt-2 pb-[1px]">
-                    <FaRegHandPointRight className="text-red-700 text-[15px]  " />
+                    <FaRegHandPointRight className="text-red-800 text-[15px]  " />
                   </span>
                   <span className={`text-gray-800 font-sans leading-8`}>
                     {item}

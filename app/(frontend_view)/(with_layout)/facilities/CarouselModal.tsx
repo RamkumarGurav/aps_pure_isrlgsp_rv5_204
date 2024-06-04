@@ -24,7 +24,7 @@ const animateDropIn = {
   },
 };
 
-export default function Modal({
+export default function CarouselModal({
   children,
   handleClose,
   modalOpen,

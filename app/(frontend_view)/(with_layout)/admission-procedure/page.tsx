@@ -266,7 +266,7 @@ export default function APPageName() {
                   viewport={{ once: true, amount: 0.2 }}
                 >
                   <span>
-                    <FaRegHandPointRight className="text-red-700 text-[15px] mt-1" />
+                    <FaRegHandPointRight className="text-red-800 text-[15px] mt-1" />
                   </span>
                   <span className={`text-gray-800  font-sans leading-6`}>
                     {item}

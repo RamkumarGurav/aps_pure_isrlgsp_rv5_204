@@ -1,7 +1,10 @@
 "use client";
+import Image from "next/image";
 import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
 import { useCallback, useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { defaultBlurDataUrl } from "@/lib/helpers/displayData";
 export default function GalleryCarousel({
   children,
   slides,
@@ -10,25 +13,25 @@ export default function GalleryCarousel({
   currentIndex,
 }: {
   children: React.ReactNode;
-  slides: string[];
+  slides: any;
   autoPlay?: boolean;
   interval?: number;
   currentIndex: number;
 }) {
-  const [currentSlideIndex, setCurrentSlideIndex] = useState(currentIndex);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(currentIndex || 0);
+  const totalSlidesNum = slides.length;
 
-  const handleNext = useCallback(
-    () =>
-      setCurrentSlideIndex(
-        currentSlideIndex === slides.length - 1 ? 0 : currentSlideIndex + 1
-      ),
-    [currentSlideIndex, slides.length]
-  );
-
-  const handlePrev = () =>
-    setCurrentSlideIndex(
-      currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1
+  const handleNext = useCallback(() => {
+    setCurrentSlideIndex((prevIndex) =>
+      prevIndex === totalSlidesNum - 1 ? 0 : prevIndex + 1
     );
+  }, [totalSlidesNum]);
+
+  const handlePrev = useCallback(() => {
+    setCurrentSlideIndex((prevIndex) =>
+      prevIndex === 0 ? totalSlidesNum - 1 : prevIndex - 1
+    );
+  }, [totalSlidesNum]);
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -38,78 +41,57 @@ export default function GalleryCarousel({
     return () => clearInterval(intervalId);
   }, [autoPlay, interval, handleNext]);
 
-  // console.log("currentSlideIndex", currentSlideIndex);
-  return (
-    <div
-      id="carousel-container"
-      className=" relative  overflow-hidden border border-solid border-gray-300 shadow-2xl rounded-lg"
-    >
-      <div
-        id="slides-container"
-        className={`  bg-white  flex  transition-transform duration-700 ease-in-out 
-    `}
-        // whenever you want to add transform effect do it using style attribute instead of tailwindcss it will work correctly
-        style={{ transform: `translateX(-${currentSlideIndex * 100}%)` }}
-      >
-        {children}
-      </div>
-      <div
-        id="carousel-nav-container"
-        className={`absolute inset-0  flex justify-between  `}
-      >
-        <div
-          className="px-2 flex justify-center items-center cursor-pointer"
-          onClick={handlePrev}
-        >
-          <button className="bg-white/50 hover:bg-white text-gray-900 p-1 rounded-full shadow">
-            <GrFormPrevious size={24} />
-          </button>
-        </div>
+  const variants = {
+    enter: { opacity: 1, transition: { duration: 1 } },
+    exit: { opacity: 0, transition: { duration: 1 } },
+  };
 
-        <div
-          className="px-2  flex justify-center items-center cursor-pointer"
-          onClick={handleNext}
+  return (
+    <>
+      <div className="overflow-hidden relative max-w-[500px] bg-white border-solid border-4 border-gray-100 shadow-2xl rounded-lg">
+        <motion.div
+          key={currentSlideIndex}
+          variants={variants}
+          initial="exit"
+          animate="enter"
+          exit="exit"
         >
-          {" "}
-          <button className="bg-white/50 hover:bg-white text-gray-900 p-1 rounded-full shadow">
-            <MdNavigateNext size={24} />
-          </button>
+          <Image
+            src={slides[currentSlideIndex].imageUrl}
+            className=" w-auto max-h-[300px] sm:max-h-[500px] object-contain"
+            alt="Image"
+            width={700}
+            height={500}
+            placeholder="blur"
+            blurDataURL={defaultBlurDataUrl}
+            priority={true}
+          />
+        </motion.div>
+
+        <div className="absolute inset-0 flex justify-between">
+          <div
+            className="px-2 flex justify-center items-center cursor-pointer"
+            onClick={handlePrev}
+          >
+            <button className="">
+              <GrFormPrevious size={44} className="text-white" />
+            </button>
+          </div>
+          <div
+            className="px-2 flex justify-center items-center cursor-pointer"
+            onClick={handleNext}
+          >
+            <button className="">
+              <MdNavigateNext size={44} className="text-white" />
+            </button>
+          </div>
         </div>
       </div>
-      {/* //{--------------Images Numbers-------------- */}
-      <div className="absolute bottom-2  left-0 right-0 ">
-        <span
-          className="text-gray-100 text-xs inline-block w-[50px] text-right font-sans font-semibold py-1 pr-3  rounded-r-2xl bg-red-900
-         bg-gradient-to-r from-gray-900 via-gary-300 to-gray-900 "
-        >
-          {currentSlideIndex + 1}/{slides.length}
-        </span>
+      <div className="absolute bottom-[-35px] left-0">
+        <p className="no-wrap font-sans text-xs p-2 text-gray-100">
+          Image {currentSlideIndex + 1} of {totalSlidesNum}
+        </p>
       </div>
-      {/* //--------------------------------------------------} */}
-      {/* //{--------------DOTS-------------- */}
-      {/* <div
-        id="dots-container"
-        className=" absolute bottom-4 right-0 left-0 flex items-center justify-center gap-2"
-      >
-        {slides.map((_, i) => (
-          // here another dive to cover the real div bcz whereneve inner div becomes bigger I dont want to
-          // show the resizing of entire dots_container
-          <div
-            key={i}
-            id="dot-container"
-            className="w-[3px] h-[3px] sm:w-3 sm:h-3 flex justify-center items-center"
-          >
-            <div
-              id="dot"
-              className={` rounded-full cursor-pointer transition-all  ${
-                i === currentSlideIndex ? "bg-white p-[3px] sm:p-[6px]" : "p-[3px] sm:p-1 bg-gray-400"
-              }`}
-              onClick={() => setCurrentSlideIndex(i)}
-            ></div>
-          </div>
-        ))}
-      </div> */}
-      {/* //--------------------------------------------------} */}
-    </div>
+    </>
   );
 }

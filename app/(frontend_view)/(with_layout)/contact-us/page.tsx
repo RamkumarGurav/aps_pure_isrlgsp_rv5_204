@@ -28,6 +28,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import ReCAPTCHA from "react-google-recaptcha";
 import EnquireForm from "@/components/Forms/EnquireForm";
+import HeadingP from "@/components/Headings/HeadingP";
 
 const sendData = async (data: any) => {
   const res = await fetch("/api/send-email", {
@@ -82,24 +83,13 @@ export default function CUPageName() {
 
       <section
         id="contactUsSection "
-        className={`contactUsSection py-[35px] sm:py-[50px] md:px-[35px] xl:px-[70px]`}
+        className={`contactUsSection py-[35px] px-4  xl:px-[70px]`}
       >
         <div className={` px-4 mx-auto `}>
           <div className={`grid lg:grid-cols-2`}>
             <div className="left ">
-              <div className="headingContainer mb-6">
-                <AnimatedDiv
-                  className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-4"
-                  variants={springAnimate70pxFromBelow10}
-                  initial={"offscreen"}
-                  whileInView={"onscreen"}
-                  viewport={{ once: true, amount: 0.2 }}
-                >
-                  Contact &nbsp;
-                  <span className="text-secondary-red1">Us</span>
-                </AnimatedDiv>
-                <div className="w-[100px] border-b-[3px] border-red-500 mb-3"></div>
-              </div>
+              <HeadingP first="Contact" second="Us" boldness="!font-bold" />
+
               <AnimatedDiv
                 variants={tweenAnimateFromLeft10}
                 initial={"offscreen"}
@@ -168,19 +158,8 @@ export default function CUPageName() {
             </div>
 
             <div className="right">
-              <div className="headingContainer mb-6">
-                <AnimatedDiv
-                  className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-4"
-                  variants={springAnimate70pxFromBelow10}
-                  initial={"offscreen"}
-                  whileInView={"onscreen"}
-                  viewport={{ once: true, amount: 0.2 }}
-                >
-                  Enquire &nbsp;
-                  <span className="text-secondary-red1">Here</span>
-                </AnimatedDiv>
-                <div className="w-[100px] border-b-[3px] border-red-500 mb-3"></div>
-              </div>
+              <HeadingP first="Enquire" second="Here" boldness="!font-bold" />
+
               <div>
                 <EnquireForm />
               </div>

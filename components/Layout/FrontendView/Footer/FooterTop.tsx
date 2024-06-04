@@ -21,7 +21,7 @@ const FooterTop = () => {
             <motion.div
               initial={{ opacity: 0, y: 100 }} // Initial position, animate from bottom
               exit={{ opacity: 0, y: 50 }} // Animation when component exits
-              transition={{ duration: 1.5 }} // Animation duration
+              transition={{ duration: 1 }} // Animation duration
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0 }}
             >
@@ -48,7 +48,7 @@ const FooterTop = () => {
             <motion.div
               initial={{ opacity: 0, y: 100 }} // Initial position, animate from bottom
               exit={{ opacity: 0, y: 50 }} // Animation when component exits
-              transition={{ duration: 1.5, delay: 1 }} // Animation duration
+              transition={{ duration: 1, delay: 0.5 }} // Animation duration
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0 }}
             >
@@ -75,7 +75,7 @@ const FooterTop = () => {
             <motion.div
               initial={{ opacity: 0, y: 100 }} // Initial position, animate from bottom
               exit={{ opacity: 0, y: 50 }} // Animation when component exits
-              transition={{ duration: 1.5 }} // Animation duration
+              transition={{ duration: 1 }} // Animation duration
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0 }}
             >
@@ -135,7 +135,7 @@ const FooterTop = () => {
             <motion.div
               initial={{ opacity: 0, y: 100 }} // Initial position, animate from bottom
               exit={{ opacity: 0, y: 50 }} // Animation when component exits
-              transition={{ duration: 1.5, delay: 1 }} // Animation duration
+              transition={{ duration: 1, delay: 0.5 }} // Animation duration
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0 }}
             >

@@ -12,8 +12,10 @@ import sports3 from "@/public/sports/3.jpg";
 /*** components ***/
 import { defaultBlurDataUrl } from "@/lib/helpers/displayData";
 /*** components-d ***/
-const Carousel = dynamic(() => import("./Carousel"), { ssr: false });
-const Modal = dynamic(() => import("@/components/GalleryDetails/Modal"), {
+const Carousel = dynamic(() => import("./Carousel"), {
+  ssr: false,
+});
+const Modal = dynamic(() => import("./CarouselModal"), {
   ssr: false,
 });
 

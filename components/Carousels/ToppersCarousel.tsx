@@ -75,128 +75,155 @@ export default function ToppersCarousel() {
         }}
       >
         <SwiperSlide>
-          <div className="text-center   w-[300px]  py-4   ">
-            <div className="topperCard rounded bg-[#F8F5E4] w-[260px]  shadow-lg pb-2 mx-auto">
-              <div
-                id="image-container"
-                className="relative h-[260px] w-[260px]  overflow-hidden "
-              >
-                {/* Image component using Tailwind classes */}
-                <Image
-                  // Source of the image
-                  src={sumaImg}
-                  alt="pagination"
-                  fill
-                  sizes="500px"
-                  // Tailwind classes for styling the image
-                  className="object-cover hover:scale-[1.1]  transition-all duration-300 ease-in-out"
-                  // Placeholder for the image
-                />
+          <div className="group || text-center   w-[300px]  py-4   || flex justify-center  ">
+            <div className="topperCard rounded bg-[#F8F5E4]   shadow-lg pb-2   || grid place-content-center">
+              <div className="px-2 overflow-hidden">
+                <div
+                  id="image-container"
+                  className="relative h-[280px] w-[260px] overflow-hidden   ||  flex justify-center items-end  
+                  || hover:scale-[1.2]   transition-all duration-700 ease-in-out"
+                >
+                  <Image
+                    src={sumaImg}
+                    alt="Sumedha"
+                    fill
+                    sizes="500px"
+                    className="object-cover "
+                  />
+                </div>
               </div>
-              <p className="mt-2 text-lg font-semibold">Sumedha Kulkarni</p>
-              <p className="mb-1 text-gray-900">(98.8%)</p>
-              <p className="mb-1 text-gray-900">His/Civ - 100</p>
-              <p className="mb-1 text-gray-900">Biology - 100</p>
-              <p className="mb-1 text-gray-900">Computers - 100</p>
+              <p className="mt-2 text-lg font-semibold group-hover:text-red-600 transition-all duration-300">
+                Sumedha Kulkarni
+              </p>
+              <p className="mb-1 text-gray-900 font-sans text-medium">
+                (98.8%)
+              </p>
+              <p className="mb-1 text-gray-900 font-sans text-medium">
+                His/Civ - 100
+              </p>
+              <p className="mb-1 text-gray-900 font-sans text-medium">
+                Biology - 100
+              </p>
+              <p className="mb-1 text-gray-900 font-sans text-medium">
+                Computers - 100
+              </p>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="text-center    py-4 px-4 flex justify-center items-center">
-            <div className="topperCard rounded bg-[#F8F5E4]  shadow-lg pb-2">
-              <div
-                id="image-container"
-                className="relative h-[260px] w-[260px]  overflow-hidden "
-              >
-                {/* Image component using Tailwind classes */}
-                <Image
-                  // Source of the image
-                  src={amithaImg}
-                  alt="pagination"
-                  fill
-                  sizes="500px"
-                  // Tailwind classes for styling the image
-                  className="object-cover hover:scale-[1.1]  transition-all duration-300  ease-in-out"
-                  // Placeholder for the image
-                />
+          <div className="group || text-center   w-[300px]  py-4   || flex justify-center  ">
+            <div className="topperCard rounded bg-[#F8F5E4]   shadow-lg pb-2   || grid place-content-center">
+              <div className="px-2 overflow-hidden">
+                <div
+                  id="image-container"
+                  className="relative h-[280px] w-[260px] overflow-hidden   ||  flex justify-center items-end  
+                  || hover:scale-[1.2]   transition-all duration-700 ease-in-out"
+                >
+                  <Image
+                    src={amithaImg}
+                    alt="amitha"
+                    fill
+                    sizes="500px"
+                    className="object-cover "
+                  />
+                </div>
               </div>
-              <p className="mt-2 text-lg font-semibold">Amith P</p>
-              <p className="mb-1 text-gray-900">(95.6%)</p>
-              <p className="mb-1 text-gray-900">His/Civ - 100</p>
-              <p className="mb-1 text-gray-900">Computers - 100</p>
+              <p className="mt-2 text-lg font-semibold group-hover:text-red-600 transition-all duration-300">
+                Amith P
+              </p>
+              <p className="mb-1 text-gray-900 font-sans text-medium">
+                (95.6%)
+              </p>
+              <p className="mb-1 text-gray-900 font-sans text-medium">
+                His/Civ - 100
+              </p>
+              <p className="mb-1 text-gray-900 font-sans text-medium">
+                Computers - 100
+              </p>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="text-center    py-4 px-4 flex justify-center items-center">
-            <div className="topperCard rounded bg-[#F8F5E4]  shadow-lg pb-2">
-              <div
-                id="image-container"
-                className="relative h-[260px] w-[240px]  overflow-hidden "
-              >
-                {/* Image component using Tailwind classes */}
-                <Image
-                  // Source of the image
-                  src={gowriImg}
-                  alt="pagination"
-                  fill
-                  sizes="500px"
-                  // Tailwind classes for styling the image
-                  className="object-cover hover:scale-[1.1]  transition-all duration-300  ease-in-out"
-                  // Placeholder for the image
-                />
+          <div className="group || text-center   w-[300px]  py-4   || flex justify-center  ">
+            <div className="topperCard rounded bg-[#F8F5E4]   shadow-lg pb-2   || grid place-content-center">
+              <div className="px-2 overflow-hidden">
+                <div
+                  id="image-container"
+                  className="relative h-[280px] w-[260px] overflow-hidden   ||  flex justify-center items-end  
+                  || hover:scale-[1.2]   transition-all duration-700 ease-in-out"
+                >
+                  <Image
+                    src={gowriImg}
+                    alt="Gowri"
+                    fill
+                    sizes="500px"
+                    className="object-cover "
+                  />
+                </div>
               </div>
-              <p className="mt-2 text-lg font-semibold">Gowri T.R</p>
-              <p className="mb-1 text-gray-900">(95.6%)</p>
-              <p className="mb-1 text-gray-900">Computers - 100</p>
+              <p className="mt-2 text-lg font-semibold group-hover:text-red-600 transition-all duration-300">
+                Gowri T.R
+              </p>
+              <p className="mb-1 text-gray-900 font-sans text-medium">
+                (95.6%)
+              </p>
+              <p className="mb-1 text-gray-900 font-sans text-medium">
+                Computers - 100
+              </p>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="text-center    py-4 px-4 flex justify-center items-center">
-            <div className="topperCard rounded bg-[#F8F5E4]  shadow-lg pb-2">
-              <div
-                id="image-container"
-                className="relative h-[260px] w-[260px]  overflow-hidden "
-              >
-                {/* Image component using Tailwind classes */}
-                <Image
-                  // Source of the image
-                  src={ayeshaImg}
-                  alt="pagination"
-                  fill
-                  sizes="500px"
-                  // Tailwind classes for styling the image
-                  className="object-cover hover:scale-[1.1]  transition-all duration-300  ease-in-out"
-                  // Placeholder for the image
-                />
+          <div className="group || text-center   w-[300px]  py-4   || flex justify-center  ">
+            <div className="topperCard rounded bg-[#F8F5E4]   shadow-lg pb-2   || grid place-content-center">
+              <div className="px-2 overflow-hidden">
+                <div
+                  id="image-container"
+                  className="relative h-[280px] w-[260px] overflow-hidden   ||  flex justify-center items-end  
+                  || hover:scale-[1.2]   transition-all duration-700 ease-in-out"
+                >
+                  <Image
+                    src={ayeshaImg}
+                    alt="Ayesha"
+                    fill
+                    sizes="500px"
+                    className="object-cover "
+                  />
+                </div>
               </div>
-              <p className="mt-2 text-lg font-semibold">Aayesha Tasleema</p>
-              <p className="mb-1 text-gray-900">(94.0%)</p>
+              <p className="mt-2 text-lg font-semibold group-hover:text-red-600 transition-all duration-300">
+                Aayesha Tasleema
+              </p>
+              <p className="mb-1 text-gray-900 font-sans text-medium">
+                (94.0%)
+              </p>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="text-center    py-4 px-4 flex justify-center items-center">
-            <div className="topperCard rounded bg-[#F8F5E4]  shadow-lg pb-2">
-              <div
-                id="image-container"
-                className="relative h-[260px] w-[260px]  overflow-hidden "
-              >
-                {/* Image component using Tailwind classes */}
-                <Image
-                  // Source of the image
-                  src={yeshImg}
-                  alt="pagination"
-                  fill
-                  sizes="500px"
-                  // Tailwind classes for styling the image
-                  className="object-cover hover:scale-[1.1]  transition-all duration-300  ease-in-out"
-                  // Placeholder for the image
-                />
+          <div className="group || text-center   w-[300px]  py-4   || flex justify-center  ">
+            <div className="topperCard rounded bg-[#F8F5E4]   shadow-lg pb-2   || grid place-content-center">
+              <div className="px-2 overflow-hidden">
+                <div
+                  id="image-container"
+                  className="relative h-[280px] w-[260px] overflow-hidden   ||  flex justify-center items-end  
+                  || hover:scale-[1.2]   transition-all duration-700 ease-in-out"
+                >
+                  <Image
+                    src={yeshImg}
+                    alt="Yesh"
+                    fill
+                    sizes="500px"
+                    className="object-cover "
+                  />
+                </div>
               </div>
-              <p className="mt-2 text-lg font-semibold">Yeshwant C.M</p>
-              <p className="mb-1 text-gray-900">(91.4%)</p>
+              <p className="mt-2 text-lg font-semibold group-hover:text-red-600 transition-all duration-300">
+                Yeshwant C.M
+              </p>
+              <p className="mb-1 text-gray-900 font-sans text-medium">
+                (91.4%)
+              </p>
             </div>
           </div>
         </SwiperSlide>

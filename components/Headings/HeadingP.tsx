@@ -4,7 +4,7 @@ const font = Lato({ weight: "400", subsets: ["latin"] });
 
 /*** c ***/
 import {
-  springAnimateFromBelow00,
+  springAnimate10FromBelow00,
   springAnimateFromBelow10,
 } from "@/lib/helpers/variants";
 import AnimatedDiv from "../Animated/AnimatedDiv";
@@ -67,7 +67,7 @@ export default function HeadingP({
             )}
           </AnimatedDiv>
           <AnimatedDiv
-            variants={springAnimateFromBelow00}
+            variants={springAnimate10FromBelow00}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true, amount: 0 }}

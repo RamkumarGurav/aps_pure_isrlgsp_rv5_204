@@ -20,11 +20,11 @@ export default function NavLinks({
 }) {
   return (
     <div
-      className={`hidden ${
+      className={` ${
         font.className
-      } h-full lg:flex  items-stretch justify-evenly  ${
-        isSticky ? "gap-2 text-base " : "gap-0 text-sm"
-      } transition-all duration-300 ease-in-out`}
+      } hidden h-full lg:flex  items-stretch justify-evenly  ${
+        isSticky ? "gap-2 text-sm " : "gap-0 text-sm"
+      } transition-all duration-700 ease-in-out`}
     >
       <Link
         href={navLinks.home.link}
@@ -45,7 +45,7 @@ export default function NavLinks({
           </div>
         </div>
 
-        <div className=" dropDownLinks   absolute top-[100%] shadow-2xl   left-0   border-b-4 rounded border-red-500   text-gray-900 visible">
+        <div className=" dropDownLinks   absolute top-[100%] shadow-2xl   left-0   border-b-4  border-red-500   text-gray-900 visible">
           <div className="dropDownLinks-x  w-full h-full  relative  ">
             {navLinks.aboutUs.dropDown.map(
               (item: { [key: string]: any }, i: number) => (
@@ -74,7 +74,7 @@ export default function NavLinks({
           </div>
         </div>
 
-        <div className=" dropDownLinks   absolute top-[100%] shadow-2xl   left-0   border-b-4 rounded border-red-500   text-gray-900 visible">
+        <div className=" dropDownLinks   absolute top-[100%] shadow-2xl   left-0   border-b-4  border-red-500   text-gray-900 visible">
           <div className="dropDownLinks-x w-full h-full  relative  ">
             {navLinks.messages.dropDown.map(
               (item: { [key: string]: any }, i: number) => (
@@ -101,7 +101,7 @@ export default function NavLinks({
           </div>
         </div>
 
-        <div className=" dropDownLinks   absolute top-[100%] shadow-2xl   left-0   border-b-4 rounded border-red-500   text-gray-900 visible">
+        <div className=" dropDownLinks   absolute top-[100%] shadow-2xl   left-0   border-b-4  border-red-500   text-gray-900 visible">
           <div className="dropDownLinks-x w-full h-full  relative  ">
             {navLinks.academics.dropDown.map(
               (item: { [key: string]: any }, i: number) => (
@@ -133,7 +133,7 @@ export default function NavLinks({
           </div>
         </div>
 
-        <div className=" dropDownLinks min-w-[220px]   absolute top-[100%] shadow-2xl   left-0   border-b-4 rounded border-red-500   text-gray-900 visible">
+        <div className=" dropDownLinks min-w-[180px]   absolute top-[100%] shadow-2xl   left-0   border-b-4  border-red-500   text-gray-900 visible">
           <div className="dropDownLinks-x w-full h-full  relative  ">
             {yearsData.data.map((item: any, i: number) => (
               <Link

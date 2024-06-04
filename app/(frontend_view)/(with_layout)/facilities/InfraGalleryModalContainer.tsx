@@ -18,7 +18,7 @@ import infra8 from "@/public/sports/1.jpg";
 import { defaultBlurDataUrl } from "@/lib/helpers/displayData";
 /*** components-d ***/
 const Carousel = dynamic(() => import("./Carousel"), { ssr: false });
-const Modal = dynamic(() => import("@/components/GalleryDetails/Modal"), {
+const Modal = dynamic(() => import("./CarouselModal"), {
   ssr: false,
 });
 

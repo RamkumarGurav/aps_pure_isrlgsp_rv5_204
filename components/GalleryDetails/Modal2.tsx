@@ -1,26 +1,27 @@
 "use client";
 
-import Backdrop from "@/components/GalleryDetails/Backdrop";
 import { motion } from "framer-motion";
-import { IoMdClose } from "react-icons/io";
+import Backdrop from "./Backdrop";
+import { IoMdCloseCircle } from "react-icons/io";
+
 const animateDropIn = {
   offscreen: {
+    y: "-100vh",
     opacity: 0,
   },
   onscreen: {
     y: 0,
     opacity: 1,
     transition: {
-      type: "tween",
-      duration: 0.2,
+      type: "spring",
+      duration: 0.1,
+      damping: 25,
+      stiffness: 500,
     },
   },
   exit: {
+    y: "100vh",
     opacity: 0,
-    transition: {
-      type: "tween",
-      duration: 0.2,
-    },
   },
 };
 
@@ -42,17 +43,13 @@ export default function Modal({
         animate={"onscreen"}
         exit={"exit"}
         variants={animateDropIn}
-        className="z-[9999]  relative   m-4  min-w-[200px] min-h-[200px]  rounded-md  flex flex-col items-center "
+        className="z-[9999]  relative bg-white  w-[clamp(50%,750px,90%)]  m-auto  rounded-md overflow-hidden flex flex-col items-center "
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="absolute left-[100px] top-[100px] z-[-1] text-white">
-          Loading...
-        </div>
-
-        <IoMdClose
-          size={30}
+        <IoMdCloseCircle
+          size={24}
           onClick={handleClose}
-          className="text-gray-100 font-bold rounded-full absolute bottom-[-35px] right-1 cursor-pointer z-[99999]"
+          className="text-gray-950 bg-white rounded-full absolute top-2 right-2 cursor-pointer z-[9999]"
         />
         {children}
       </motion.div>

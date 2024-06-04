@@ -6,8 +6,8 @@ import styles from "./styles.module.css";
 import { useEffect } from "react";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 /*** fonts ***/
-import { Open_Sans } from "next/font/google";
-const font = Open_Sans({ weight: "400", subsets: ["latin"] });
+import { Nunito } from "next/font/google";
+const font = Nunito({ weight: "400", subsets: ["latin"] });
 /*** components ***/
 import InfraGalleryModalContainer from "./InfraGalleryModalContainer";
 import KCModalContainer from "./KCModalContainer";
@@ -20,6 +20,9 @@ import {
   springAnimate70pxFromBelow16,
 } from "@/lib/helpers/variants";
 import AnimatedText from "@/components/Animated/AnimatedText";
+import Bedcrumb from "@/components/Breadcrumbs/Bedcrum";
+import HDivider from "@/components/Dividers/HDivider";
+import HeadingP from "@/components/Headings/HeadingP";
 /*** helpers ***/
 const boxVariant = {
   hidden: {
@@ -67,37 +70,10 @@ export default function FPageName() {
   }, [id]);
   return (
     <div className={`  bg-[#FDFBF0] overflow-hidden`}>
-      <div
-        className={`bedcrumb flex flex-col justify-center items-center h-[140px]   sm:h-[170px] bg-cover`}
-        style={{ backgroundImage: "url('../../inner2.jpg')" }}
-      >
-        <h1 className={`text-2xl sm:text-4xl text-white `}>Facilities</h1>
-
-        <div className="flex justify-center items-center mt-2">
-          <Link href="/" className={`text-xs  text-[#EF4438] font-bold `}>
-            Home
-          </Link>
-          <span className="text-white text-xs">&nbsp;&nbsp;-&nbsp;&nbsp;</span>
-          <span className="font-medium text-white text-xs ">Facilities</span>
-        </div>
-      </div>
-
-      <section
-        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]   `}
-      >
+      <Bedcrumb heading="Facilities" pageName1="Facilities" />
+      <section className={` py-[35px] sm:py-[50px] px-4  xl:px-[70px]   `}>
         <div className={` p-4 mx-auto   `}>
-          <AnimatedDiv
-            initial={{ opacity: 0, x: "50vw" }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ type: "spring", stiffness: 120, duration: 1 }}
-            viewport={{ once: true, amount: 0 }}
-          >
-            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
-              Our&nbsp;
-              <span className="text-secondary-red1">Facilities</span>
-            </div>
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </AnimatedDiv>
+          <HeadingP first="Our" second="Facilities" boldness="!font-bold" />
 
           <div className="">
             <AnimatedDiv
@@ -361,34 +337,21 @@ export default function FPageName() {
         </div>
       </section>
 
-      <section id="Section" className={`  sm:px-[35px] xl:px-[70px]`}>
-        <div className={` px-4 mx-auto `}>
-          <div className="border-b-gray-200 border-b-[1px] my-0"></div>
-        </div>
+      <section id="Section" className={`  px-4  xl:px-[70px]`}>
+        <HDivider />
       </section>
       <section
         id="infrastuctureSection"
-        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]`}
+        className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]`}
       >
         <div className={` px-4 mx-auto `}>
-          <AnimatedDiv
-            initial={{ opacity: 0, x: "50vw" }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ type: "spring", stiffness: 120, duration: 1 }}
-            viewport={{ once: true, amount: 0.1 }}
-          >
-            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
-              Our&nbsp;
-              <span className="text-secondary-red1">Infrastructure</span>
-            </div>
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </AnimatedDiv>
+          <HeadingP first="Our" second="Infrastructure" boldness="!font-bold" />
           <AnimatedText
             variants={springAnimate70pxFromBelow16}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true, amount: 0 }}
-            className={`leading-8  text-[#1d1d1d] mb-3`}
+            className={`leading-8 ${font.className}  text-[#1d1d1d] mb-3`}
           >
             Appolo is renowned for its education and holistic development that
             it renders to its students. It has always been catering to the needs
@@ -401,35 +364,24 @@ export default function FPageName() {
           </div>
         </div>
       </section>
-      <section className={`  sm:px-[35px] xl:px-[70px]`}>
+      <section className={` px-4 xl:px-[70px]`}>
         <div className={` px-4 mx-auto `}>
           <div className="border-b-gray-200 border-b-[1px] my-0"></div>
         </div>
       </section>
       <section
         id="knowledgeCenterSection"
-        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]`}
+        className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]`}
       >
         <div className={` px-4 mx-auto `}>
-          <AnimatedDiv
-            initial={{ opacity: 0, x: "50vw" }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ type: "spring", stiffness: 120, duration: 1 }}
-            viewport={{ once: true, amount: 0 }}
-          >
-            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
-              Knowledge&nbsp;
-              <span className="text-secondary-red1">Center</span>
-            </div>
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </AnimatedDiv>
+          <HeadingP first="Knowledge" second="Center" boldness="!font-bold" />
 
           <AnimatedText
             variants={springAnimate70pxFromBelow16}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true, amount: 0 }}
-            className={`leading-8 font-semibold  text-[#1d1d1d] mb-3`}
+            className={`leading-8 ${font.className} !font-semibold  text-[#1d1d1d] mb-3`}
           >
             &#x0022;NEVER STOP LEARNING, BECAUSE LIFE NEVER STOPS
             TEACHING&#x0022;
@@ -439,7 +391,7 @@ export default function FPageName() {
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true, amount: 0 }}
-            className={`leading-8  text-[#1d1d1d] mb-3`}
+            className={`leading-8 ${font.className}  text-[#1d1d1d] mb-3`}
           >
             Our school library serves as the center and coordinating agency to
             facilitate, support the students learning. The goal is to ensure all
@@ -456,35 +408,22 @@ export default function FPageName() {
           </div>
         </div>
       </section>
-      <section id="Section" className={`  sm:px-[35px] xl:px-[70px]`}>
-        <div className={` px-4 mx-auto `}>
-          <div className="border-b-gray-200 border-b-[1px] my-0"></div>
-        </div>
+      <section id="Section" className={`  px-4 xl:px-[70px]`}>
+        <HDivider />
       </section>
       <section
         id="scienceLabSection"
-        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]`}
+        className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]`}
       >
         <div className={` px-4 mx-auto `}>
-          <AnimatedDiv
-            initial={{ opacity: 0, x: "50vw" }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ type: "spring", stiffness: 120, duration: 1 }}
-            viewport={{ once: true, amount: 0 }}
-          >
-            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
-              Science&nbsp;
-              <span className="text-secondary-red1">Lab</span>
-            </div>
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </AnimatedDiv>
+          <HeadingP first="Science" second="Lab" boldness="!font-bold" />
 
           <AnimatedText
             variants={springAnimate70pxFromBelow16}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true, amount: 0 }}
-            className={`leading-8  text-[#1d1d1d] mb-3`}
+            className={`leading-8 ${font.className}  text-[#1d1d1d] mb-3`}
           >
             Science lab is equipped with all the required materials to conduct
             laboratory teaching and experiments that encourage deep
@@ -503,34 +442,24 @@ export default function FPageName() {
           </div>
         </div>
       </section>
-      <section id="Section" className={`  sm:px-[35px] xl:px-[70px]`}>
+      <section id="Section" className={` px-4 xl:px-[70px]`}>
         <div className={` px-4 mx-auto `}>
           <div className="border-b-gray-200 border-b-[1px] my-0"></div>
         </div>
       </section>
       <section
         id="sportsSection"
-        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]`}
+        className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]`}
       >
         <div className={` px-4 mx-auto `}>
-          <AnimatedDiv
-            initial={{ opacity: 0, x: "50vw" }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ type: "spring", stiffness: 120, duration: 1 }}
-            viewport={{ once: true, amount: 0 }}
-          >
-            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
-              Sports&nbsp;
-            </div>
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </AnimatedDiv>
+          <HeadingP first="Sports" boldness="!font-bold" />
 
           <AnimatedText
             variants={springAnimate70pxFromBelow16}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true, amount: 0 }}
-            className={`leading-8  text-[#1d1d1d] mb-3`}
+            className={`leading-8 ${font.className}  text-[#1d1d1d] mb-3`}
           >
             SPORTS teaches us character, it teaches us how to play by rules, it
             teaches us to know what it feels like to win and lose, it teaches us
@@ -552,44 +481,33 @@ export default function FPageName() {
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true, amount: 0 }}
-            className={`leading-8 font-semibold  text-[#1d1d1d] mb-3`}
+            className={`leading-8 ${font.className} !font-bold  text-[#1d1d1d] mb-3`}
           >
-            &#x0022;SPORTS NOT ONLY BUILD BETTER SPORTSMEN BUT ALSO BETTER
-            PEOPLE&#x0022;
+            SPORTS NOT ONLY BUILD BETTER SPORTSMEN BUT ALSO BETTER PEOPLE
           </AnimatedText>
           <div className=" mt-4   grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-start">
             <SportsModalContainer />
           </div>
         </div>
       </section>
-      <section id="Section" className={`  sm:px-[35px] xl:px-[70px]`}>
+      <section id="Section" className={` px-4 xl:px-[70px]`}>
         <div className={` px-4 mx-auto `}>
           <div className="border-b-gray-200 border-b-[1px] my-0"></div>
         </div>
       </section>
       <section
         id="transportSection"
-        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]`}
+        className={` py-[35px] mb-8 sm:py-[50px]px-4 xl:px-[70px]`}
       >
         <div className={` px-4 mx-auto `}>
-          <AnimatedDiv
-            initial={{ opacity: 0, x: "50vw" }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ type: "spring", stiffness: 120, duration: 1 }}
-            viewport={{ once: true, amount: 0 }}
-          >
-            <div className="text-2xl md:text-4xl text-start font-semibold font-sans text-gray-900 mb-2">
-              Transport&nbsp;
-            </div>
-            <div className="w-[100px] border-b-[4px] border-red-500 mb-4"></div>
-          </AnimatedDiv>
+          <HeadingP first="Transport" boldness="!font-bold" />
 
           <AnimatedText
             variants={springAnimate70pxFromBelow16}
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true, amount: 0 }}
-            className={`leading-8  text-[#1d1d1d] mb-3`}
+            className={`leading-8 ${font.className}  text-[#1d1d1d] mb-3`}
           >
             Transport – The need for safe passage of each child to school and
             back home is of paramount importance to us. To ensure safe travel
@@ -603,7 +521,7 @@ export default function FPageName() {
             on the bus is well trained in first aid and emergency management.
           </AnimatedText>
 
-          <div className=" mt-4   grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-start">
+          <div className=" mt-4 ||  grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-start">
             <TransportModalContainer />
           </div>
         </div>
