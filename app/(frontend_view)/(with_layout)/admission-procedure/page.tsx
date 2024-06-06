@@ -1,6 +1,6 @@
 /*** fonts ***/
 import { Poppins } from "next/font/google";
-const font = Poppins({ weight: "400", subsets: ["latin"] });
+const font = Poppins({ weight: "400", subsets: ["latin"],display: "swap" });
 /*** icons ***/
 import { FaRegHandPointRight } from "react-icons/fa";
 /*** components ***/
@@ -22,7 +22,7 @@ export default function APPageName() {
 
       <section
         id="admissionProcedureSection"
-        className={`overflow-hidden bg-[#FDFBF0] py-[35px] sm:py-[50px] px-4 xl:px-[70px] ${font.className}`}
+        className={`overflow-hidden bg-[#FDFBF0] py-[35px] sm:py-[50px] px-4 xl:px-[86px] ${font.className}`}
       >
         <div className={`  mx-auto `}>
           <HeadingP

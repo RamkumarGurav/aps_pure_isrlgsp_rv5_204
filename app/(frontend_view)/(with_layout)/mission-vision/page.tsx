@@ -2,7 +2,7 @@
 import Image from "next/image";
 /*** fonts ***/
 import { Poppins } from "next/font/google";
-const font = Poppins({ weight: "400", subsets: ["latin"] });
+const font = Poppins({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** images ***/
 import schoolStudentsImg from "@/public/school-students.jpg";
 /*** icons ***/
@@ -29,7 +29,7 @@ export default function MVPageName() {
 
       <AnimatedDiv
         id="missionVisionSection "
-        className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px] overflow-hidden`}
+        className={` py-[35px] sm:py-[50px] px-4 xl:px-[86px] overflow-hidden`}
         variants={springAnimate20vhFromBelow10}
         initial={"offscreen"}
         whileInView={"onscreen"}

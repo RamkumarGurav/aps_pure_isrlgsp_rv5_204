@@ -1,17 +1,20 @@
 "use client";
 import Image from "next/image";
-import Logo from "@/public/logo.png";
+import Logo from "@/public/logo.jpg";
 import { useEffect, useRef, useState } from "react";
 import { GrFormClose } from "react-icons/gr";
 import { FaBars } from "react-icons/fa";
 import NavLinks from "./NavLinks";
 import Link from "next/link";
-import HeaderTop from "./HeaderTop";
-import DropDown from "./DropDown";
+
 /*** fonts ***/
 import { Open_Sans } from "next/font/google";
+const font = Open_Sans({ weight: "400", subsets: ["latin"], display: "swap" });
+/*** packages ***/
 import { useQuery } from "@tanstack/react-query";
-const font = Open_Sans({ weight: "400", subsets: ["latin"] });
+/*** cmts ***/
+import HeaderTop from "./HeaderTop";
+import DropDown from "./DropDown";
 /*** util functions ***/
 async function fetchData() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/years`);
@@ -80,7 +83,7 @@ export default function Navbar({
             : "h-[74.88px] lg:h-[100px]"
         }   
          
-        flex items-center text-gray-900 font-serif w-full  h-full px-4 xl:px-[70px] ${
+        flex items-center text-gray-900 font-serif w-full  h-full px-4 xl:px-[86px] ${
           font.className
         }  
          z-[998]
@@ -92,7 +95,7 @@ export default function Navbar({
          z-[997]`}
         >
           <div className=" h-full  flex items-center  justify-between    ">
-            <Link href="/" className="">
+            <Link href="/" className="py-[8px]">
               <Image
                 src={Logo}
                 alt="logo"
@@ -100,9 +103,9 @@ export default function Navbar({
                 height={200}
                 className={`w-auto object-cover   ${
                   isSticky
-                    ? " h-[56px] sm:h-[71px]"
-                    : " h-[46px] sm:h-[84.14px]"
-                } transition-all duration-700 ease-in-out`}
+                    ? " h-[56px] sm:h-[68px] lg:h-[65px]"
+                    : " h-[46px] sm:h-[74px] lg:h-[70px] xl:h-[80px]"
+                } transition-all duration-300 ease-in-out`}
                 // placeholder="blur"
                 priority
               />

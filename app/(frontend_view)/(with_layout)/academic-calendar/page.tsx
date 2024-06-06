@@ -1,6 +1,6 @@
 /*** fonts ***/
 import { Open_Sans } from "next/font/google";
-const font = Open_Sans({ weight: "400", subsets: ["latin"] });
+const font = Open_Sans({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** icons ***/
 import { FaRegHandPointRight } from "react-icons/fa";
 /*** components ***/
@@ -17,7 +17,7 @@ export default function PageName() {
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>
       <Bedcrumb heading="Academics" pageName1="Academic Calender" />
 
-      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]   `}>
+      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[86px]   `}>
         <div className={` p-4 mx-auto   `}>
           <HeadingP
             first={academicCalendarDetails.mainHeadingList[0]}
@@ -71,7 +71,7 @@ export default function PageName() {
                               <td className="whitespace-nowrap border-e border-neutral-200 text-xs sm:text-base pl-2 py-2 dark:border-white/10">
                                 {item.eventsList.map(
                                   (event: string, j: number) => (
-                                    <div className=" flex gap-1 mb-1">
+                                    <div key={j} className=" flex gap-1 mb-1">
                                       <span className="flex justify-center items-center ">
                                         <FaRegHandPointRight className="text-red-800  " />
                                       </span>

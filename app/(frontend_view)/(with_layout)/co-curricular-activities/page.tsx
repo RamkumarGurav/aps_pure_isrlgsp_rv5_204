@@ -2,7 +2,7 @@
 import Image from "next/image";
 /*** fonts ***/
 import { Poppins } from "next/font/google";
-const font = Poppins({ weight: "400", subsets: ["latin"] });
+const font = Poppins({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** icons ***/
 import { FaRegHandPointRight } from "react-icons/fa";
 /*** images ***/
@@ -23,7 +23,7 @@ export default function CCAPageName() {
   return (
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>
       <Bedcrumb heading="Academics" pageName1="Co-Curricular Activities" />
-      <section className="pt-[35px] sm:pt-[50px] px-4 xl:px-[70px]  ">
+      <section className="pt-[35px] sm:pt-[50px] px-4 xl:px-[86px]  ">
         <div className=" ">
           <HeadingP
             first={
@@ -119,11 +119,11 @@ export default function CCAPageName() {
           </div>
         </div>
       </section>
-      <section id="" className={` sm:px-[35px] xl:px-[70px]`}>
+      <section id="" className={` sm:px-[35px] xl:px-[86px]`}>
         <HDivider />
       </section>
 
-      <section className={` mb-[40px] px-4 xl:px-[70px]   `}>
+      <section className={` mb-[40px] px-4 xl:px-[86px]   `}>
         <div className={` p-8 mx-auto bg-[#FAF6E2]  `}>
           <HeadingP
             fontSize="2xl"

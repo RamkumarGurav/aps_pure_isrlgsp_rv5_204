@@ -1,6 +1,6 @@
 /*** fonts ***/
 import { Open_Sans } from "next/font/google";
-const font = Open_Sans({ weight: "400", subsets: ["latin"] });
+const font = Open_Sans({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** components ***/
 import { eventsDetails } from "@/lib/helpers/displayData";
 import { springAnimate70pxFromBelow10 } from "@/lib/helpers/variants";
@@ -13,7 +13,7 @@ export default function NEPageName() {
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>
       <Bedcrumb heading="News and Events" pageName1="News and Events" />
 
-      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]   `}>
+      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[86px]   `}>
         <div className={`  mx-auto   `}>
           <HeadingP
             first={eventsDetails.mainHeadingList[0]}

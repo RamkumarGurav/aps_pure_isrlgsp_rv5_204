@@ -1,10 +1,13 @@
 "use client";
 import { useState, useCallback, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { StaticImageData } from "next/image";
 import Image from "next/image";
+
+/***  ***/
+import { motion, AnimatePresence } from "framer-motion";
 import { MdNavigateNext } from "react-icons/md";
 import { GrFormPrevious } from "react-icons/gr";
-import { StaticImageData } from "next/image";
+
 import { defaultBlurDataUrl } from "@/lib/helpers/displayData";
 // Import your images here
 /*** images ***/

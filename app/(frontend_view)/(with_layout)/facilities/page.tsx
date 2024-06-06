@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 /*** fonts ***/
 import { Nunito } from "next/font/google";
-const font = Nunito({ weight: "400", subsets: ["latin"] });
+const font = Nunito({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** components ***/
 import InfraGalleryModalContainer from "./InfraGalleryModalContainer";
 import KCModalContainer from "./KCModalContainer";
@@ -71,7 +71,7 @@ export default function FPageName() {
   return (
     <div className={`  bg-[#FDFBF0] overflow-hidden`}>
       <Bedcrumb heading="Facilities" pageName1="Facilities" />
-      <section className={` py-[35px] sm:py-[50px] px-4  xl:px-[70px]   `}>
+      <section className={` py-[35px] sm:py-[50px] px-4  xl:px-[86px]   `}>
         <div className={` p-4 mx-auto   `}>
           <HeadingP first="Our" second="Facilities" boldness="!font-bold" />
 
@@ -81,7 +81,7 @@ export default function FPageName() {
               whileInView="visible"
               initial="hidden"
               viewport={{ once: true, amount: 0 }}
-              className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+              className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-8 gap-y-8"
             >
               <AnimatedDiv
                 variants={listVariant}
@@ -337,12 +337,12 @@ export default function FPageName() {
         </div>
       </section>
 
-      <section id="Section" className={`  px-4  xl:px-[70px]`}>
+      <section id="Section" className={`  px-4  xl:px-[86px]`}>
         <HDivider />
       </section>
       <section
         id="infrastuctureSection"
-        className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]`}
+        className={` py-[35px] sm:py-[50px] px-4 xl:px-[86px]`}
       >
         <div className={` px-4 mx-auto `}>
           <HeadingP first="Our" second="Infrastructure" boldness="!font-bold" />
@@ -359,19 +359,19 @@ export default function FPageName() {
             friendly atmosphere for physical, social and mental development of
             child
           </AnimatedText>
-          <div className=" mt-4   grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-start">
+          <div className=" mt-4   grid md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8  place-content-center place-items-start">
             <InfraGalleryModalContainer />
           </div>
         </div>
       </section>
-      <section className={` px-4 xl:px-[70px]`}>
+      <section className={` px-4 xl:px-[86px]`}>
         <div className={` px-4 mx-auto `}>
           <div className="border-b-gray-200 border-b-[1px] my-0"></div>
         </div>
       </section>
       <section
         id="knowledgeCenterSection"
-        className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]`}
+        className={` py-[35px] sm:py-[50px] px-4 xl:px-[86px]`}
       >
         <div className={` px-4 mx-auto `}>
           <HeadingP first="Knowledge" second="Center" boldness="!font-bold" />
@@ -400,20 +400,20 @@ export default function FPageName() {
             and lending library is well stocked with a vast collection of books,
             reports, journals and periodicals. The library also provides access
             to the business and management related digital resources. Students
-            can utilize these services for their classroom –related work for
+            can utilize these services for their classroom–related work for
             further research into their areas of interest.
           </AnimatedText>
-          <div className=" mt-4   grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-start">
+          <div className=" mt-4   grid md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 place-content-center place-items-start">
             <KCModalContainer />
           </div>
         </div>
       </section>
-      <section id="Section" className={`  px-4 xl:px-[70px]`}>
+      <section id="Section" className={`  px-4 xl:px-[86px]`}>
         <HDivider />
       </section>
       <section
         id="scienceLabSection"
-        className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]`}
+        className={` py-[35px] sm:py-[50px] px-4 xl:px-[86px]`}
       >
         <div className={` px-4 mx-auto `}>
           <HeadingP first="Science" second="Lab" boldness="!font-bold" />
@@ -437,19 +437,19 @@ export default function FPageName() {
             complex theories of science. Science is made very interesting and
             effective for students in our institution.
           </AnimatedText>
-          <div className=" mt-4   grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-start">
+          <div className=" mt-4   grid md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 place-content-center place-items-start">
             <ScienceLabModalContainer />
           </div>
         </div>
       </section>
-      <section id="Section" className={` px-4 xl:px-[70px]`}>
+      <section id="Section" className={` px-4 xl:px-[86px]`}>
         <div className={` px-4 mx-auto `}>
           <div className="border-b-gray-200 border-b-[1px] my-0"></div>
         </div>
       </section>
       <section
         id="sportsSection"
-        className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]`}
+        className={` py-[35px] sm:py-[50px] px-4 xl:px-[86px]`}
       >
         <div className={` px-4 mx-auto `}>
           <HeadingP first="Sports" boldness="!font-bold" />
@@ -485,19 +485,19 @@ export default function FPageName() {
           >
             SPORTS NOT ONLY BUILD BETTER SPORTSMEN BUT ALSO BETTER PEOPLE
           </AnimatedText>
-          <div className=" mt-4   grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-start">
+          <div className=" mt-4   grid md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 place-content-center place-items-start">
             <SportsModalContainer />
           </div>
         </div>
       </section>
-      <section id="Section" className={` px-4 xl:px-[70px]`}>
+      <section id="Section" className={` px-4 xl:px-[86px]`}>
         <div className={` px-4 mx-auto `}>
           <div className="border-b-gray-200 border-b-[1px] my-0"></div>
         </div>
       </section>
       <section
         id="transportSection"
-        className={` py-[35px] mb-8 sm:py-[50px]px-4 xl:px-[70px]`}
+        className={` py-[35px] mb-8 sm:py-[50px]px-4 xl:px-[86px]`}
       >
         <div className={` px-4 mx-auto `}>
           <HeadingP first="Transport" boldness="!font-bold" />
@@ -521,7 +521,7 @@ export default function FPageName() {
             on the bus is well trained in first aid and emergency management.
           </AnimatedText>
 
-          <div className=" mt-4 ||  grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-start">
+          <div className=" mt-4 ||  grid md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 place-content-center place-items-start">
             <TransportModalContainer />
           </div>
         </div>

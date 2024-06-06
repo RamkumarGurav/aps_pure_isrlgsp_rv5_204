@@ -2,7 +2,7 @@
 import Image from "next/image";
 /*** fonts ***/
 import { Nunito } from "next/font/google";
-const font = Nunito({ weight: "400", subsets: ["latin"] });
+const font = Nunito({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** images ***/
 import komalImg from "@/public/komal.jpg";
 import nabeelaImg from "@/public/nabeela.jpg";
@@ -20,7 +20,7 @@ export default function TMPageName() {
 
       <section
         id="trusteesMsg"
-        className="py-[35px] sm:py-[50px] px-4 xl:px-[70px]  "
+        className="py-[35px] sm:py-[50px] px-4 xl:px-[86px]  "
       >
         <div className=" ">
           <HeadingP

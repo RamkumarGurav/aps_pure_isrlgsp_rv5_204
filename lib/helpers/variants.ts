@@ -44,6 +44,18 @@ export const springAnimate70pxFromBelow16 = {
   },
 };
 
+export const springAnimate30pxFromAbove10 = {
+  offscreen: { y: -30, opacity: 0 },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 1,
+    },
+  },
+};
+
 export const springAnimate70pxFromAbove10 = {
   offscreen: { y: -70, opacity: 0 },
   onscreen: {

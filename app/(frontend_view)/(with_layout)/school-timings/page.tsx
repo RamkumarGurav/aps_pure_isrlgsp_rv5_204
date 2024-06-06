@@ -1,6 +1,6 @@
 /*** images ***/
 import { Poppins } from "next/font/google";
-const font = Poppins({ weight: "400", subsets: ["latin"] });
+const font = Poppins({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** components ***/
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
 import AnimatedTitle from "@/components/Animated/AnimatedDiv";
@@ -20,7 +20,7 @@ export default function STPageName() {
       <Bedcrumb heading="Academics" pageName1="School Timings" />
 
       <section
-        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[70px]   `}
+        className={` py-[35px] sm:py-[50px] sm:px-[35px] xl:px-[86px]   `}
       >
         <div className={`overflow-hidden  ||  p-4 mx-auto   `}>
           <HeadingP first="School" second="Timings" boldness="!font-bold" />

@@ -2,7 +2,7 @@
 import Image from "next/image";
 /*** fonts ***/
 import { Nunito } from "next/font/google";
-const font = Nunito({ weight: "400", subsets: ["latin"] });
+const font = Nunito({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** images ***/
 import AbouApsImg from "@/public/abt-img.jpg";
 import rajab from "@/public/rajab.jpg";
@@ -35,7 +35,7 @@ export default function Home() {
 
       <section
         id="aboutAps"
-        className={`aboutApsContainer py-[35px] sm:py-[50px] px-4 xl:px-[70px]`}
+        className={`aboutApsContainer py-[35px] sm:py-[50px] px-4 xl:px-[86px]`}
       >
         <div className={`  mx-auto overflow-hidden`}>
           <div className="aboutApsContainer grid lg:grid-cols-2 gap-x-8 gap-y-4 ">
@@ -90,7 +90,7 @@ export default function Home() {
       </section>
       <section
         id="chairpersonMsg"
-        className="py-[35px] sm:py-[50px]  xl:px-[70px]  "
+        className="py-[35px] sm:py-[50px]  xl:px-[86px]  "
       >
         <div className="">
           <HeadingCenterP first="Chairperson Message" />
@@ -186,7 +186,7 @@ export default function Home() {
       </section>
       <section
         id="principalMsg"
-        className="py-[35px] sm:py-[50px]  xl:px-[70px] "
+        className="py-[35px] sm:py-[50px]  xl:px-[86px] "
       >
         <div className="">
           <HeadingCenterP first="Principal Message" />
@@ -277,7 +277,7 @@ export default function Home() {
       </section>
       <section
         id="toppers"
-        className="py-[35px] sm:py-[50px] px-4 xl:px-[70px] bg-[#F9F9F9] z-0"
+        className="py-[35px] sm:py-[50px] px-4 xl:px-[86px] bg-[#F9F9F9] z-0"
       >
         <HeadingCenterP first="Toppers" />
         <AnimatedDiv
@@ -295,7 +295,7 @@ export default function Home() {
         className=" object-cover z-0 "
         style={{ backgroundImage: "url(../../trust_bg.jpg)" }}
       >
-        <div className=" bg-[#25304ae7] py-[35px] sm:py-[50px] px-4 xl:px-[70px] w-full h-full">
+        <div className=" bg-[#25304ae7] py-[35px] sm:py-[50px] px-4 xl:px-[86px] w-full h-full">
           <div className="mx-auto flex flex-col justify-center items-center my-4 px-4">
             <AnimatedDiv
               className="text-2xl md:text-4xl text-start font-bold text-gray-100 mb-4"

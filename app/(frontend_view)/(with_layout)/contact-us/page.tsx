@@ -4,7 +4,7 @@
 import { useRef, useState } from "react";
 /*** fonts ***/
 import { Poppins } from "next/font/google";
-const font = Poppins({ weight: "400", subsets: ["latin"] });
+const font = Poppins({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** icons ***/
 import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
@@ -83,7 +83,7 @@ export default function CUPageName() {
 
       <section
         id="contactUsSection "
-        className={`contactUsSection py-[35px] px-4  xl:px-[70px]`}
+        className={`contactUsSection py-[35px] px-4  xl:px-[86px]`}
       >
         <div className={` px-4 mx-auto `}>
           <div className={`grid lg:grid-cols-2`}>

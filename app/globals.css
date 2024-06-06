@@ -166,8 +166,8 @@
 }
 /* //---Navbar */
 .navLink {
-  @apply text-gray-700 hover:text-[#e6272d] w-full h-full leading-7  font-sans font-semibold 
-    whitespace-nowrap px-2 lg:px-2 xl:px-4   uppercase;
+  @apply text-gray-800 hover:text-[#e6272d] w-full h-full leading-7  font-sans font-semibold 
+    whitespace-nowrap px-2  xl:px-3   uppercase;
 }
 
 .navlinkDownIcon {
@@ -187,14 +187,17 @@
 
 .dropDownLinks {
   visibility: hidden;
+  opacity: 0;
 }
 
 .dropDownContainer:hover .dropDownLinks {
   visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+
   background-color: #ffffff;
   /* box-shadow: rgba(0, 0, 0, 0.537) 0px 2px 2px; */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-
   z-index: 1;
 }
 

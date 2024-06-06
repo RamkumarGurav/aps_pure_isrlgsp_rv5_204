@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 
 /*** fonts ***/
 import { Inter } from "next/font/google";
-const font = Inter({ weight: "400", subsets: ["latin"] });
+const font = Inter({ weight: "400", subsets: ["latin"], display: "swap" });
 
 /*****************************************************
            Component

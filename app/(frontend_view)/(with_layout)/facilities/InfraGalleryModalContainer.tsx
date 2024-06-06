@@ -33,7 +33,7 @@ export default function XInfraGalleryModalContainer() {
 
   return (
     <>
-      <div className=" rounded overflow-hidden w-[290px] sm:w-[385px] md:w-[330px] lg:w-[300px] xl:w-[385px]">
+      <div className=" rounded overflow-hidden w-[290px] sm:w-[350px] md:w-[330px] lg:w-[300px] xl:w-[350px]">
         <div className="bg-white w-full  flex items-center justify-center">
           <motion.div
             initial={{ y: "100px", opacity: 0 }}
@@ -58,7 +58,7 @@ export default function XInfraGalleryModalContainer() {
           </motion.div>
         </div>
       </div>
-      <div className=" rounded overflow-hidden w-[290px] sm:w-[385px] md:w-[330px] lg:w-[300px] xl:w-[385px]">
+      <div className=" rounded overflow-hidden w-[290px] sm:w-[350px] md:w-[330px] lg:w-[300px] xl:w-[350px]">
         <div className="bg-white w-full  flex items-center justify-center">
           <motion.div
             initial={{ y: "100px", opacity: 0 }}
@@ -83,7 +83,7 @@ export default function XInfraGalleryModalContainer() {
           </motion.div>
         </div>
       </div>
-      <div className=" rounded overflow-hidden w-[290px] sm:w-[385px] md:w-[330px] lg:w-[300px] xl:w-[385px]">
+      <div className=" rounded overflow-hidden w-[290px] sm:w-[350px] md:w-[330px] lg:w-[300px] xl:w-[350px]">
         <div className="bg-white w-full  flex items-center justify-center">
           <motion.div
             initial={{ y: "100px", opacity: 0 }}
@@ -109,7 +109,7 @@ export default function XInfraGalleryModalContainer() {
           </motion.div>
         </div>
       </div>
-      <div className=" rounded overflow-hidden w-[290px] sm:w-[385px] md:w-[330px] lg:w-[300px] xl:w-[385px]">
+      <div className=" rounded overflow-hidden w-[290px] sm:w-[350px] md:w-[330px] lg:w-[300px] xl:w-[350px]">
         <div className="bg-white w-full  flex items-center justify-center">
           <motion.div
             initial={{ y: "100px", opacity: 0 }}
@@ -134,7 +134,7 @@ export default function XInfraGalleryModalContainer() {
           </motion.div>
         </div>
       </div>
-      <div className=" rounded overflow-hidden w-[290px] sm:w-[385px] md:w-[330px] lg:w-[300px] xl:w-[385px]">
+      <div className=" rounded overflow-hidden w-[290px] sm:w-[350px] md:w-[330px] lg:w-[300px] xl:w-[350px]">
         <div className="bg-white w-full  flex items-center justify-center">
           <motion.div
             initial={{ y: "100px", opacity: 0 }}
@@ -160,7 +160,7 @@ export default function XInfraGalleryModalContainer() {
           </motion.div>
         </div>
       </div>
-      <div className=" rounded overflow-hidden w-[290px] sm:w-[385px] md:w-[330px] lg:w-[300px] xl:w-[385px]">
+      <div className=" rounded overflow-hidden w-[290px] sm:w-[350px] md:w-[330px] lg:w-[300px] xl:w-[350px]">
         <div className="bg-white w-full  flex items-center justify-center">
           <motion.div
             initial={{ y: "100px", opacity: 0 }}
@@ -185,7 +185,7 @@ export default function XInfraGalleryModalContainer() {
           </motion.div>
         </div>
       </div>
-      <div className=" rounded overflow-hidden w-[290px] sm:w-[385px] md:w-[330px] lg:w-[300px] xl:w-[385px]">
+      <div className=" rounded overflow-hidden w-[290px] sm:w-[350px] md:w-[330px] lg:w-[300px] xl:w-[350px]">
         <div className="bg-white w-full  flex items-center justify-center">
           <motion.div
             initial={{ y: "100px", opacity: 0 }}
@@ -211,7 +211,7 @@ export default function XInfraGalleryModalContainer() {
           </motion.div>
         </div>
       </div>
-      <div className=" rounded overflow-hidden w-[290px] sm:w-[385px] md:w-[330px] lg:w-[300px] xl:w-[385px]">
+      <div className=" rounded overflow-hidden w-[290px] sm:w-[350px] md:w-[330px] lg:w-[300px] xl:w-[350px]">
         <div className="bg-white w-full  flex items-center justify-center">
           <motion.div
             initial={{ y: "100px", opacity: 0 }}

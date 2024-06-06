@@ -1,8 +1,6 @@
 /*** nextjs ***/
 import { notFound } from "next/navigation";
-/*** fonts ***/
-import { Mulish } from "next/font/google";
-const font = Mulish({ weight: "400", subsets: ["latin"] });
+
 /*** components ***/
 import Cpage from "./Cpage";
 
@@ -15,6 +13,7 @@ async function fetchData(fy: string) {
     if (!res.ok) {
       const text = await res.text();
       console.error("Error fetching data:", text);
+      console.error("Error fetching url:", url);
       return null;
     }
 
@@ -67,7 +66,6 @@ async function fetchDataGSP() {
 }
 export async function generateStaticParams() {
   const data = await fetchDataGSP();
-  // console.log("albums", albums);
   return data.map((item: { [key: string]: any }) => ({
     year: item.fiscal_year.toString(),
   }));

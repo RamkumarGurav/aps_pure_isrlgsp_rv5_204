@@ -16,7 +16,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useCallback, useRef } from "react";
 import { Roboto } from "next/font/google";
-const font = Roboto({ weight: "400", subsets: ["latin"] });
+const font = Roboto({ weight: "400", subsets: ["latin"], display: "swap" });
 
 export default function ToppersCarousel() {
   const swiperRef = useRef<SwiperType>();
@@ -50,8 +50,8 @@ export default function ToppersCarousel() {
         navigation={true}
         breakpoints={{
           640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            slidesPerView: 1,
+            spaceBetween: 0,
           },
 
           // when window width is >= 640px
@@ -75,12 +75,12 @@ export default function ToppersCarousel() {
         }}
       >
         <SwiperSlide>
-          <div className="group || text-center   w-[300px]  py-4   || flex justify-center  ">
+          <div className="group mx-auto || text-center  w-[240px] sm:w-[260px]  py-4   || flex justify-center    ">
             <div className="topperCard rounded bg-[#F8F5E4]   shadow-lg pb-2   || grid place-content-center">
               <div className="px-2 overflow-hidden">
                 <div
                   id="image-container"
-                  className="relative h-[280px] w-[260px] overflow-hidden   ||  flex justify-center items-end  
+                  className="relative h-[280px] w-[230px] sm:w-[240px] overflow-hidden   ||  flex justify-center items-end  
                   || hover:scale-[1.2]   transition-all duration-700 ease-in-out"
                 >
                   <Image
@@ -92,7 +92,7 @@ export default function ToppersCarousel() {
                   />
                 </div>
               </div>
-              <p className="mt-2 text-lg font-semibold group-hover:text-red-600 transition-all duration-300">
+              <p className="mt-2 text-lg font-semibold group mx-auto-hover:text-red-600 transition-all duration-300">
                 Sumedha Kulkarni
               </p>
               <p className="mb-1 text-gray-900 font-sans text-medium">
@@ -111,12 +111,12 @@ export default function ToppersCarousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="group || text-center   w-[300px]  py-4   || flex justify-center  ">
+          <div className="group mx-auto || text-center  w-[240px] sm:w-[260px]  py-4   || flex justify-center   ">
             <div className="topperCard rounded bg-[#F8F5E4]   shadow-lg pb-2   || grid place-content-center">
               <div className="px-2 overflow-hidden">
                 <div
                   id="image-container"
-                  className="relative h-[280px] w-[260px] overflow-hidden   ||  flex justify-center items-end  
+                  className="relative h-[280px]  w-[230px] sm:w-[240px] overflow-hidden   ||  flex justify-center items-end  
                   || hover:scale-[1.2]   transition-all duration-700 ease-in-out"
                 >
                   <Image
@@ -128,7 +128,7 @@ export default function ToppersCarousel() {
                   />
                 </div>
               </div>
-              <p className="mt-2 text-lg font-semibold group-hover:text-red-600 transition-all duration-300">
+              <p className="mt-2 text-lg font-semibold group mx-auto-hover:text-red-600 transition-all duration-300">
                 Amith P
               </p>
               <p className="mb-1 text-gray-900 font-sans text-medium">
@@ -144,12 +144,12 @@ export default function ToppersCarousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="group || text-center   w-[300px]  py-4   || flex justify-center  ">
+          <div className="group mx-auto || text-center  w-[240px] sm:w-[260px]  py-4   || flex justify-center   ">
             <div className="topperCard rounded bg-[#F8F5E4]   shadow-lg pb-2   || grid place-content-center">
               <div className="px-2 overflow-hidden">
                 <div
                   id="image-container"
-                  className="relative h-[280px] w-[260px] overflow-hidden   ||  flex justify-center items-end  
+                  className="relative h-[280px]  w-[230px] sm:w-[240px] overflow-hidden   ||  flex justify-center items-end  
                   || hover:scale-[1.2]   transition-all duration-700 ease-in-out"
                 >
                   <Image
@@ -161,7 +161,7 @@ export default function ToppersCarousel() {
                   />
                 </div>
               </div>
-              <p className="mt-2 text-lg font-semibold group-hover:text-red-600 transition-all duration-300">
+              <p className="mt-2 text-lg font-semibold group mx-auto-hover:text-red-600 transition-all duration-300">
                 Gowri T.R
               </p>
               <p className="mb-1 text-gray-900 font-sans text-medium">
@@ -174,12 +174,12 @@ export default function ToppersCarousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="group || text-center   w-[300px]  py-4   || flex justify-center  ">
+          <div className="group mx-auto || text-center  w-[240px] sm:w-[260px]  py-4   || flex justify-center   ">
             <div className="topperCard rounded bg-[#F8F5E4]   shadow-lg pb-2   || grid place-content-center">
               <div className="px-2 overflow-hidden">
                 <div
                   id="image-container"
-                  className="relative h-[280px] w-[260px] overflow-hidden   ||  flex justify-center items-end  
+                  className="relative h-[280px]  w-[230px] sm:w-[240px] overflow-hidden   ||  flex justify-center items-end  
                   || hover:scale-[1.2]   transition-all duration-700 ease-in-out"
                 >
                   <Image
@@ -191,7 +191,7 @@ export default function ToppersCarousel() {
                   />
                 </div>
               </div>
-              <p className="mt-2 text-lg font-semibold group-hover:text-red-600 transition-all duration-300">
+              <p className="mt-2 text-lg font-semibold group mx-auto-hover:text-red-600 transition-all duration-300">
                 Aayesha Tasleema
               </p>
               <p className="mb-1 text-gray-900 font-sans text-medium">
@@ -201,12 +201,12 @@ export default function ToppersCarousel() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="group || text-center   w-[300px]  py-4   || flex justify-center  ">
+          <div className="group mx-auto || text-center  w-[240px] sm:w-[260px]  py-4   || flex justify-center   ">
             <div className="topperCard rounded bg-[#F8F5E4]   shadow-lg pb-2   || grid place-content-center">
               <div className="px-2 overflow-hidden">
                 <div
                   id="image-container"
-                  className="relative h-[280px] w-[260px] overflow-hidden   ||  flex justify-center items-end  
+                  className="relative h-[280px]  w-[230px] sm:w-[240px] overflow-hidden   ||  flex justify-center items-end  
                   || hover:scale-[1.2]   transition-all duration-700 ease-in-out"
                 >
                   <Image
@@ -218,7 +218,7 @@ export default function ToppersCarousel() {
                   />
                 </div>
               </div>
-              <p className="mt-2 text-lg font-semibold group-hover:text-red-600 transition-all duration-300">
+              <p className="mt-2 text-lg font-semibold group mx-auto-hover:text-red-600 transition-all duration-300">
                 Yeshwant C.M
               </p>
               <p className="mb-1 text-gray-900 font-sans text-medium">

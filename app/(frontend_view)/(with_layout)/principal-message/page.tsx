@@ -2,7 +2,7 @@
 import Image from "next/image";
 /*** fonts ***/
 import { Open_Sans } from "next/font/google";
-const font = Open_Sans({ weight: "400", subsets: ["latin"] });
+const font = Open_Sans({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** images ***/
 import sreelakshmi from "@/public/sreelakshmi.jpg";
 /*** components ***/
@@ -19,7 +19,7 @@ export default function PMPageName() {
       <Bedcrumb heading="Messages" pageName1="Principal's Message" />
       <section
         id="principalMsg"
-        className="py-[35px] sm:py-[50px]  xl:px-[70px]  "
+        className="py-[35px] sm:py-[50px]  xl:px-[86px]  "
       >
         <div className="">
           <HeadingP

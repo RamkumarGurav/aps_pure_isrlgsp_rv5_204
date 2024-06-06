@@ -6,10 +6,10 @@ import {
 import MovingMessage from "@/components/MovingMessage/MovingMessage";
 import { notFound } from "next/navigation";
 import SideEnquire from "@/components/Layout/FrontendView/Stickers/SideEnquire";
-import ScrollToTop from "@/components/Layout/FrontendView/Stickers/ScrollToTop";
 import Navbar from "@/components/Layout/FrontendView/Navbar/Navbar";
 import FooterTop from "@/components/Layout/FrontendView/Footer/FooterTop";
 import FooterBottom from "@/components/Layout/FrontendView/Footer/FooterBottom";
+import ScrollToTop from "@/components/Layout/FrontendView/Stickers/ScrollToTop";
 
 let year = new Date().getFullYear();
 let nextYear = year + 1;

@@ -1,6 +1,6 @@
 /*** fonts ***/
 import { Poppins } from "next/font/google";
-const font = Poppins({ weight: "400", subsets: ["latin"] });
+const font = Poppins({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** components ***/
 import { holidayCalendarDetails } from "@/lib/helpers/displayData";
 import AnimatedDiv from "@/components/Animated/AnimatedDiv";
@@ -15,7 +15,7 @@ export default function HLPageName() {
     <div className={`${font.className}  bg-[#FDFBF0] overflow-hidden`}>
       <Bedcrumb heading="Academics" pageName1="Holiday's list" />
 
-      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]   `}>
+      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[86px]   `}>
         <div className={` mx-auto   `}>
           <HeadingP
             first={holidayCalendarDetails.mainHeadingList[0]}

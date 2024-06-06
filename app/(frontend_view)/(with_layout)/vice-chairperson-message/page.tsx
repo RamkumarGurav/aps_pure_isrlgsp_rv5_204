@@ -2,7 +2,7 @@
 import Image from "next/image";
 /*** fonts ***/
 import { Open_Sans } from "next/font/google";
-const font = Open_Sans({ weight: "400", subsets: ["latin"] });
+const font = Open_Sans({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** images ***/
 import vc from "@/public/vc.jpg";
 /*** components ***/
@@ -19,7 +19,7 @@ export default function VCPageName() {
 
       <section
         id="chairpersonMsg"
-        className="py-[35px] sm:py-[50px] px-4 xl:px-[70px]  "
+        className="py-[35px] sm:py-[50px] px-4 xl:px-[86px]  "
       >
         <div className="">
           <HeadingP

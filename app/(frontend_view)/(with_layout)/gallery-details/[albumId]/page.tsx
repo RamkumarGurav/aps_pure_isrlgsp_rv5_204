@@ -12,6 +12,7 @@ async function fetchData(id: string) {
     if (!res.ok) {
       const text = await res.text();
       console.error("Error fetching data:", text);
+      console.error("Error fetching url:", url);
       return null;
     }
 

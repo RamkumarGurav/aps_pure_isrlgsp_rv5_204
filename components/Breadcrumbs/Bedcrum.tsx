@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { Lato } from "next/font/google";
-const font = Lato({ weight: "400", subsets: ["latin"] });
+const font = Lato({ weight: "400", subsets: ["latin"], display: "swap" });
 
 export default function Bedcrumb({
   heading,

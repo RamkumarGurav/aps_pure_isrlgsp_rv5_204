@@ -2,7 +2,7 @@
 import Image from "next/image";
 /*** fonts ***/
 import { Nunito } from "next/font/google";
-const font = Nunito({ weight: "400", subsets: ["latin"] });
+const font = Nunito({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** images ***/
 import AbouApsImg from "@/public/abt-img.jpg";
 /*** components ***/
@@ -25,7 +25,7 @@ export default function AUPageName() {
 
       <section
         id="AboutUsSection "
-        className={`AboutUsSection py-[35px] sm:py-[50px]px-4 xl:px-[70px] overflow-hidden`}
+        className={`AboutUsSection py-[35px] sm:py-[50px] sm:pb-[86px] px-4 xl:px-[86px] overflow-hidden`}
       >
         <div className={` px-4 mx-auto `}>
           <div>

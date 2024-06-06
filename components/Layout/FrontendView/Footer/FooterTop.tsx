@@ -8,12 +8,12 @@ import { FaPhone } from "react-icons/fa6";
 import { AnimatePresence, motion } from "framer-motion";
 import { footerContactUs, footerQuickLinks } from "@/lib/helpers/displayData";
 import { Roboto } from "next/font/google";
-const font = Roboto({ weight: "400", subsets: ["latin"] });
+const font = Roboto({ weight: "400", subsets: ["latin"], display: "swap" });
 
 const FooterTop = () => {
   return (
     <div
-      className={`bg-[#1A2742]  text-white px-4 xl:px-[70px] py-[50px] ${font.className} font-sans`}
+      className={`bg-[#1A2742]  text-white px-4 xl:px-[86px] py-[50px] ${font.className} font-sans`}
     >
       <div className=" px-4 mx-auto ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-10">

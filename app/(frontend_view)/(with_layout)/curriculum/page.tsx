@@ -2,7 +2,7 @@
 import Image from "next/image";
 /*** fonts ***/
 import { Nunito } from "next/font/google";
-const font = Nunito({ weight: "400", subsets: ["latin"] });
+const font = Nunito({ weight: "400", subsets: ["latin"], display: "swap" });
 /*** images ***/
 import knowledgeCenter1 from "@/public/knowledge-center/1.jpg";
 /*** icons ***/
@@ -22,7 +22,7 @@ export default function CPageName() {
 
       <section
         id="curriculumSection"
-        className="py-[35px] sm:py-[50px] px-4 xl:px-[70px]  "
+        className="py-[35px] sm:py-[50px] px-4 xl:px-[86px]  "
       >
         <div className="">
           <HeadingP
@@ -121,11 +121,11 @@ export default function CPageName() {
           </div>
         </div>
       </section>
-      <section id="" className={` px-4 xl:px-[70px]`}>
+      <section id="" className={` px-4 xl:px-[86px]`}>
         <HDivider classes="!m-0" />
       </section>
 
-      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[70px]   `}>
+      <section className={` py-[35px] sm:py-[50px] px-4 xl:px-[86px]   `}>
         <div className={`  p-8  mx-auto bg-[#FAF6E2] `}>
           <div className="grid lg:grid-cols-3  gap-4">
             {curriculumDetails.classSubjectsData.map(
@@ -169,7 +169,7 @@ export default function CPageName() {
         </div>
       </section>
 
-      <section className={` pb-[35px] sm:pb-[50px] px-4 xl:px-[70px] `}>
+      <section className={` pb-[35px] sm:pb-[50px] px-4 xl:px-[86px] `}>
         <div className={`p-8  mx-auto bg-[#FAF6E2]`}>
           <div className="mx-auto ">
             <HeadingP
@@ -215,7 +215,7 @@ export default function CPageName() {
           </div>
         </div>
       </section>
-      <section className={` pb-[35px] sm:pb-[50px] px-4 xl:px-[70px] `}>
+      <section className={` pb-[35px] sm:pb-[50px] px-4 xl:px-[86px] `}>
         <div className={` p-8 mx-auto bg-[#FAF6E2]`}>
           <div className="mx-auto ">
             <HeadingP

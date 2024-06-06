@@ -2,7 +2,7 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Nunito } from "next/font/google";
-const font = Nunito({ weight: "400", subsets: ["latin"] });
+const font = Nunito({ weight: "400", subsets: ["latin"], display: "swap" });
 
 export default function MovingMessage({
   message,
@@ -14,7 +14,7 @@ export default function MovingMessage({
   return (
     <div
       style={{ overflow: "hidden", whiteSpace: "nowrap", width: "100%" }}
-      className={`overflow-hidden w-full px-4 xl:px-[70px]  ||  flex  items-center  ||  h-[35.5px]  ${classes}`}
+      className={`overflow-hidden w-full px-4 xl:px-[86px]  ||  flex  items-center  ||  h-[35.5px]  ${classes}`}
     >
       <div
         style={{ overflow: "hidden", whiteSpace: "nowrap", width: "100%" }}
